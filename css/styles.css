@@ -1,0 +1,152 @@
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    //--fuentes--
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(216, 238, 231);
+    color: black;
+}
+header{
+    position: sticky;
+    top:15px;
+}
+header a {
+    color: black;
+    margin: 4px;
+    font-size: 14px;  
+     
+}
+.boton1{
+    border-radius: 15px;
+    background-color: wheat ;
+    padding: 5px;
+    margin: 25px 15px;
+    color: black;
+    display: inline-block;
+}
+
+main{
+    margin:100px 20%; 100 px top/bottom  20% left/right  
+}
+#perfil{
+    width: 100px;
+    border-radius: 50%;
+}
+header a:hover {
+    color: rgb(245, 161, 4);
+}
+#presentacion{
+    font-size: 15px;
+}
+#disponible{
+    border-radius: 15px;
+    background-color: aqua;
+    padding: 5px;
+}
+nav {
+    text-align: center;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 10px 5px 8px rgb(166, 239, 244);
+    background-color: rgb(141, 244, 209);
+    margin: 15px auto;
+    padding: 8px;
+    
+
+} */
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: auto auto auto; /*repeat(3, auto);*/
+	grid-template-rows:  auto auto auto auto;  /*repeat(4, auto);*/
+
+	grid-template-areas: "header    header    header"
+						 "main      main      sidebar"
+						 "widget-1  widget-2  sidebar"
+						 "footer    footer    footer";
+}
+
+.container > * {
+	background: #fff;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+}
+
+.main {
+	grid-area: main;
+}
+
+.sidebar {
+	grid-column: 3 / 4;
+	background: #fAA43D;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 100px;
+	grid-area: sidebar;
+}
+
+.widget-1, .widget-2 {
+	background: #55a8fd;
+	color: #fff;
+	
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.widget-1 {
+	grid-area: widget-1;
+}
+
+.widget-2 {
+	grid-area: widget-2;
+}
+
+.footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+					 		 "main main main"
+							 "sidebar sidebar sidebar"
+							 "widget-1 widget-1 widget-2"
+							 "footer footer footer";
+	}
+}
+@media screen and (max-width: 600px){
+	.contenedor {
+		grid-template-areas: "header header header"
+					 		 "main main main"
+							 "sidebar sidebar sidebar"
+							 "widget-1 widget-1 widget-1"
+							 "widget-2 widget-2 widget-2"
+							 "footer footer footer";
+	}
+}
