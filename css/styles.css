@@ -150,3 +150,13 @@ header a:hover {
 							 "footer footer footer";
 	}
 }
+
+.form
+{
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 300px;
+	padding: 10px;
+	margin: 50px;
+	background-color: rgb(248, 246, 246);
+}
