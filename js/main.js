@@ -4,11 +4,15 @@ document.getElementById("footer").innerHTML = `
 Lorem ipsum dolor sit amet.
 <a href="mailto:mail@bue.gob.ar">Contacto</a>`;
 
-document.getElementById("nav").innerHTML = `
+document.getElementsByClassName("header").innerHTML = `
+<img class="Logo" src="" alt="Logo">
+
+<nav class="nav" id="nav">
 <a href="index.html">Home</a>
 <a href="about.html">Sobre nosotros</a>
 <a href="form.html">Contáctanos</a>
 <a href="">Link de prueba</a>
+</nav>
 <p>Texto de ejemplo</p>`;
 
 //pop-up
