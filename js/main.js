@@ -4,7 +4,7 @@ document.getElementById("footer").innerHTML = `
 Lorem ipsum dolor sit amet.
 <a href="mailto:mail@bue.gob.ar">Contacto</a>`;
 
-document.getElementsByClassName("header").innerHTML = `
+document.querySelector("header").innerHTML = `
 <img class="Logo" src="" alt="Logo">
 
 <nav class="nav" id="nav">
