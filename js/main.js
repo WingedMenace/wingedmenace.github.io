@@ -13,7 +13,7 @@ document.getElementById("nav").innerHTML = `
 
 //pop-up
 function userpopup() {
-    var popup = document.querySelector("uPopup");
+    var popup = document.querySelector("comentario");
     popup.classList.toggle("show");
 }
 
@@ -29,12 +29,6 @@ function validar() {
         document.getElementById("validar_usuario").innerHTML = "Deje su nombre";
         error = true;
         name.focus();
-
-    }
-    if (mail.value == "") {
-        document.getElementById("validar_clave").innerHTML = "No olvide su mail";
-        error = true;
-        mail.focus();
 
     }
     if (comment.value.length <= 20) {
