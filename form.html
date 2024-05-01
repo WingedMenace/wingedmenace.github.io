@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
 </head>
-<body>
-    <form id="form" onsubmit="return validar();">
-        <h2>Nombre</h2>
-        <label for="name">Nombre</label>  
-        <input type='text' name='name' id='name' value="" placeholder="Tu nombre aquí"/>
-        <br>
-        <div id="validar_usuario" style="color:red;">&nbsp;    </div>
-        
-        <label for="mail">Correo electrónico</label>  
-        <input type='email' name='mail' id='mail' placeholder="Tu mail aqui" /><br>
-        <div id="validar_email" style="color:red;">&nbsp;     </div>
-        
-        <input type="radio" id="compras" name="intencion" value="">
-        <label for="html">Quiero adquirir productos</label><br>
-        <input type="radio" id="cursos" name="intencion" value="Cursos">
-        <label for="css">Quiero participar de un curso</label><br>
 
-        <label for="clave">Comentario </label>  
-        <input type='text' name='comentario' id='comment' placeholder="Mínimo 20 caracteres" /><br>
-        <div class="uPopup" onfocus="userpopup()">
-            <span class="popuptext" id="myPopup">¡Agradecemos tus comentarios!</span>
-        </div>
-        <div id="validar_comentario" style="color:red;">&nbsp;     </div>
-        
-        <input type='submit' value='Enviar'>
-        <input type="reset" value="Reset">
-    </form>
+<body>
+    <header>
+        <h1>Contáctanos</h1>
+        <nav class="nav" id="nav"></nav>
+    </header>
+    <main class="main">
+        <form id="form" onsubmit="return validar();">
+            <h2>Nombre</h2>
+            <label for="name">Nombre</label>
+            <input type='text' name='name' id='name' value="" placeholder="Tu nombre aquí" />
+            <br>
+            <div id="validar_usuario" style="color:red;">&nbsp; </div>
+
+            <label for="mail">Correo electrónico</label>
+            <input type='email' name='mail' id='mail' placeholder="Tu mail aqui" /><br>
+            <div id="validar_email" style="color:red;">&nbsp; </div>
+
+            <input type="radio" id="compras" name="intencion" value="">
+            <label for="compras">Quiero adquirir productos</label><br>
+            <input type="radio" id="cursos" name="intencion" value="">
+            <label for="cursos">Quiero participar de un curso</label><br><br>
+
+            <label for="clave">Comentario </label>
+            <input type='text' name='comentario' id='comment' placeholder="Mínimo 20 caracteres" /><br>
+            <div class="uPopup" onfocus="userpopup()">
+                <span class="popuptext" id="myPopup">¡Agradecemos tus comentarios!</span>
+            </div>
+            <div id="validar_comentario" style="color:red;">&nbsp; </div>
+
+            <input type='submit' value='Enviar'>
+            <input type="reset" value="Reset">
+        </form>
+    </main>
 </body>
+
 </html>
