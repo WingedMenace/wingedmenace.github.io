@@ -17,7 +17,7 @@ document.querySelector("header").innerHTML = `
 
 //pop-up
 function userpopup() {
-    var popup = document.getElementById("comment");
+    var popup = document.getElementById("popup");
     popup.classList.toggle("show");
 }
 

@@ -9,9 +9,10 @@
 </head>
 
 <body>
-    <header class="header"></header>
-    <main class="main">
 
+    <header class="header" id="header"></header>
+
+    <main class="main">
         <form id="form" onsubmit="return validar();">
             <h1>Contáctanos</h1>
             <label for="name">Nombre</label>
@@ -27,15 +28,19 @@
             <input type="radio" id="cursos" name="intencion" value="">
             <label for="cursos">Quiero participar de un curso</label><br><br>
 
-            <label for="comment">Comentario </label>
-            <input type='text' name='comentario' id='comment' class="popup" placeholder="Mínimo 20 caracteres" onclick="userpopup()"/>
-                <span class="popuptext" id="myPopup">¡Agradecemos tus comentarios!</span>
+            <label for="comment">
+                <div class="popup" onclick="userpopup()">Comentario
+                    <span class="popuptext" id="popup">¡Agradecemos tus comentarios!</span>
+                </div>
+            </label>
+            <input type='text' name='comentario' id='comment'  placeholder="Mínimo 20 caracteres"/>
             <div id="validar_comentario" style="color:red;">&nbsp; </div>
             <br>
             <input type='submit' value='Enviar'>
             <input type="reset" value="Reiniciar formulario">
         </form>
     </main>
+    <footer class="footer" id="footer"></footer>
+    <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
 </html>
