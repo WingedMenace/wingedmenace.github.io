@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<body>
+    <form id="form" onsubmit="return validar();">
+        <h2>Nombre</h2>
+        <label for="name">Nombre</label>  
+        <input type='text' name='name' id='name' value="Tu nombre aquí" /><br>
+        <div id="validar_usuario" style="color:red;">&nbsp;    </div>
+        
+        <label for="clave">Correo electrónico</label>  
+        <input type='email' name='correo' id='correo' value="Tu mail aquí" /><br>
+        <div id="validar_email" style="color:red;">&nbsp;     </div>
+
+        
+        <label for="clave">Comentario </label>  
+        <input type='text' name='comentario' id='comment' value="Mínimo 20 caracteres" /><br>
+        <div class="uPopup" onfocusout="userpopup()">
+            <span class="popuptext" id="myPopup">¡Agradecemos tus comentarios!</span>
+        </div>
+        <div id="validar_comentario" style="color:red;">&nbsp;     </div>
+        
+        <input type='submit'  value='Enviar'></td>
+    </form>
+</body>
+</html>
