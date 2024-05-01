@@ -1,10 +1,10 @@
 //document.querySelector("footer").innerHTML = 
 
-document.getElementById("footer").innerHTML = `
+document.querySelector("footer").innerHTML = `
 Lorem ipsum dolor sit amet.
 <a href="mailto:mail@bue.gob.ar">Contacto</a>`;
 
-document.getElementById("nav").innerHTML = `
+document.querySelector("nav").innerHTML = `
 <a href="index.html">Home</a>
 <a href="about.html">Sobre nosotros</a>
 <a href="form.html">Contáctanos</a>
