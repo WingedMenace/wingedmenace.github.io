@@ -4,7 +4,7 @@ document.getElementById("footer").innerHTML = `
 Lorem ipsum dolor sit amet.
 <a href="mailto:mail@bue.gob.ar">Contacto</a>`;
 
-document.querySelector("header").innerHTML = `
+document.querySelector("#header").innerHTML = `
 <img class="Logo" src="" alt="Logo">
 
 <nav class="nav" id="nav">
@@ -28,7 +28,7 @@ function validar() {
     let comment = document.getElementById("comment")
     let error = false;
     document.getElementById("validar_usuario").innerHTML = "&nbsp;  ";
-    document.getElementById("validar_clave").innerHTML = "&nbsp; ";
+    document.getElementById("validar_comentario").innerHTML = "&nbsp; ";
     if (name.value == "") {
         document.getElementById("validar_usuario").innerHTML = "Deje su nombre";
         error = true;
@@ -45,11 +45,13 @@ function validar() {
 
         document.getElementById("usuario").value = ""
         document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-        document.getElementById("clave").value = ""
-        document.getElementById("validar_clave").innerHTML = "&nbsp;";
         document.getElementById("comment").value = ""
         document.getElementById("validar_comentario").innerHTML = "&nbsp;";
-        alert("Dato enviado")
+        window.alert("Dato enviado");
+        
+    }
+    else{
+        window.alert("Completa los campos adecuadamente")
     }
     return !error
 }
