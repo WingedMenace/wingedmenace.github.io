@@ -11,23 +11,31 @@
 <body>
 
     <header class="header" id="header"></header>
-
+    <!--Hay que sacar los required eventualmente-->
     <main class="main">
         <form id="form" onsubmit="validar();">
             <h1>Contáctanos</h1>
             <label for="name">Nombre</label>
-            <input type='text' name='name' id='name' placeholder="Tu nombre aqui" />
-            <br>
+            <input type='text' name='name' id='name' placeholder="Tu nombre aqui" required="" />
             <div id="validar_usuario" style="color:red;">&nbsp; </div>
 
             <label for="mail">Correo electrónico</label>
-            <input type='email' name='mail' id='mail' placeholder="Tu mail aqui" /><br>
+            <input type='email' name='mail' id='mail' placeholder="Tu mail aqui" required="" />
 
-            <input type="radio" id="compras" name="intencion" value="">
-            <label for="compras">Quiero adquirir productos</label><br>
-            <input type="radio" id="cursos" name="intencion" value="">
-            <label for="cursos">Quiero participar de un curso</label><br><br>
-
+            <ul class="radios">
+                <li>
+                    <input type="radio" class="radio" name="intencion" value="">
+                    <label>Quiero adquirir productos</label>
+                </li>
+                <li>
+                    <input type="radio" class="radio" name="intencion" value="">
+                    <label>Quiero participar de un curso</label>
+                </li>
+                <li>
+                    <input type="radio" class="radio" name="intencion" value="">
+                    <label>Quiero dejar un comentario</label>
+                </li>
+            </ul>
             <label for="Encontrar">¿Cómo nos encontraste?</label>
             <select name="encontrar" id="encontrar" required="">
                 <option value="" selected="" disabled="">Selecciona</option>
@@ -36,20 +44,18 @@
                 <option value="publicidad">Vi una publicidad</option>
                 <option value="redes sociales">Encontraste nuestras redes</option>
             </select>
-            <br><br>
             <label for="comment">
                 <div class="popup" onclick="userpopup()">Comentario
                     <span class="popuptext" id="popup">¡Agradecemos tus comentarios!</span>
                 </div>
             </label>
             </div>
-            <br><br>
+            <br>
             <textarea rows="5" name="comentario" id="comment" placeholder="lorem x20" required=""></textarea>
 
             <!--<input type='text' name='comentario' id='comment' placeholder="Mínimo 20 caracteres" />-->
             <div id="validar_comentario" style="color:red;">&nbsp; </div>
-            <input type='submit' value='Enviar'>
-            <input type="reset" value="Reiniciar formulario">
+            <input type='submit' value='Enviar'><input type="reset" value="Reiniciar formulario">
         </form>
         <!--<form id="fs-frm" name="department-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
             <fieldset id="fs-frm-inputs">

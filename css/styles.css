@@ -53,16 +53,16 @@ header a:hover {
     padding: 5px;
 }*/
 .nav {
-    text-align: center;
-    border-radius: 15px;
-    width: 400px;
-    box-shadow: 10px 5px 8px rgb(166, 239, 244);
-    background-color: rgb(141, 244, 209);
-    margin: 15px auto;
-    padding: 8px;
-    
+	text-align: center;
+	border-radius: 15px;
+	width: 400px;
+	box-shadow: 10px 5px 8px rgb(166, 239, 244);
+	background-color: rgb(141, 244, 209);
+	margin: 15px auto;
+	padding: 8px;
 
-} 
+
+}
 
 .container {
 	width: 90%;
@@ -70,16 +70,18 @@ header a:hover {
 	margin: 20px auto;
 	display: grid;
 	grid-gap: 20px;
-	grid-template-columns: auto auto auto; /*repeat(3, auto);*/
-	grid-template-rows:  auto auto auto auto;  /*repeat(4, auto);*/
+	grid-template-columns: auto auto auto;
+	/*repeat(3, auto);*/
+	grid-template-rows: auto auto auto auto;
+	/*repeat(4, auto);*/
 
 	grid-template-areas: "header    header    header"
-						 "main      main      sidebar"
-						 "widget-1  widget-2  sidebar"
-						 "footer    footer    footer";
+		"main      main      sidebar"
+		"widget-1  widget-2  sidebar"
+		"footer    footer    footer";
 }
 
-.container > * {
+.container>* {
 	background: #fff;
 	padding: 20px;
 	border-radius: 4px;
@@ -98,7 +100,7 @@ header a:hover {
 .sidebar {
 	grid-column: 3 / 4;
 	background: #fAA43D;
-	
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -107,10 +109,11 @@ header a:hover {
 	grid-area: sidebar;
 }
 
-.widget-1, .widget-2 {
+.widget-1,
+.widget-2 {
 	background: #55a8fd;
 	color: #fff;
-	
+
 	text-align: center;
 	display: flex;
 	align-items: center;
@@ -131,28 +134,28 @@ header a:hover {
 	grid-area: footer;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 	.contenedor {
 		grid-template-areas: "header header header"
-					 		 "main main main"
-							 "sidebar sidebar sidebar"
-							 "widget-1 widget-1 widget-2"
-							 "footer footer footer";
-	}
-}
-@media screen and (max-width: 600px){
-	.contenedor {
-		grid-template-areas: "header header header"
-					 		 "main main main"
-							 "sidebar sidebar sidebar"
-							 "widget-1 widget-1 widget-1"
-							 "widget-2 widget-2 widget-2"
-							 "footer footer footer";
+			"main main main"
+			"sidebar sidebar sidebar"
+			"widget-1 widget-1 widget-2"
+			"footer footer footer";
 	}
 }
 
-.form
-{
+@media screen and (max-width: 600px) {
+	.contenedor {
+		grid-template-areas: "header header header"
+			"main main main"
+			"sidebar sidebar sidebar"
+			"widget-1 widget-1 widget-1"
+			"widget-2 widget-2 widget-2"
+			"footer footer footer";
+	}
+}
+
+.form {
 	border: 2px solid black;
 	border-radius: 5px;
 	width: 300px;
@@ -169,10 +172,10 @@ header a:hover {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
+}
+
+/* The actual popup */
+.popup .popuptext {
 	visibility: hidden;
 	width: 160px;
 	background-color: #555;
@@ -185,10 +188,10 @@ header a:hover {
 	bottom: 125%;
 	left: 50%;
 	margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -197,22 +200,221 @@ header a:hover {
 	border-width: 5px;
 	border-style: solid;
 	border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
 	visibility: visible;
 	-webkit-animation: fadeIn 1s;
 	animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-	from {opacity: 0;} 
-	to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-	from {opacity: 0;}
-	to {opacity:1 ;}
-  }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/*formulario*/
+
+/* reset */
+form input,
+form select,
+form textarea,
+form label {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 100%;
+	color: inherit;
+	border: none;
+	border-radius: 0;
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+form label,
+form legend {
+	font-size: 0.825rem;
+	margin-bottom: 0.5rem;
+}
+
+/* border, padding, margin, width */
+form input,
+form select,
+form textarea {
+	box-sizing: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 0.75em 1rem;
+	margin-bottom: 1.5rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+	background-color: white;
+	outline-style: solid;
+	outline-width: thin;
+	outline-color: gray;
+	outline-offset: -1px;
+}
+
+form [type="text"],
+form [type="email"] {
+	width: 100%;
+}
+
+form [type="button"],
+form [type="submit"],
+form [type="reset"] {
+	width: auto;
+	display: inline-flex;
+	cursor: pointer;
+}
+
+form [type="button"]:focus,
+form [type="submit"]:focus,
+form [type="reset"]:focus {
+	outline: none;
+}
+
+form select {
+	text-transform: none;
+}
+
+/*radio*/
+input[type='radio'] {
+	--active: #275EFE;
+	--active-inner: #fff;
+	--focus: 2px rgba(39, 94, 254, .3);
+	--border: #BBC1E1;
+	--border-hover: #275EFE;
+	--background: #fff;
+	--disabled: #F6F8FF;
+	--disabled-inner: #E1E6F9;
+	height: 21px;
+	outline: none;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	margin: 0;
+	cursor: pointer;
+	border: 1px solid var(--bc, var(--border));
+	background: var(--b, var(--background));
+	transition: background .3s, border-color .3s, box-shadow .2s;
+
+	&:after {
+		content: '';
+		display: block;
+		left: 0;
+		top: 0;
+		position: absolute;
+		transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+	}
+
+	&:checked {
+		--b: var(--active);
+		--bc: var(--active);
+		--d-o: .3s;
+		--d-t: .6s;
+		--d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+	}
+
+	&:disabled {
+		--b: var(--disabled);
+		cursor: not-allowed;
+		opacity: .9;
+
+		&:checked {
+			--b: var(--disabled-inner);
+			--bc: var(--border);
+		}
+
+		&+label {
+			cursor: not-allowed;
+		}
+	}
+
+	&:hover {
+		&:not(:checked) {
+			&:not(:disabled) {
+				--bc: var(--border-hover);
+			}
+		}
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 var(--focus);
+	}
+
+	&:not(.switch) {
+		width: 21px;
+
+		&:after {
+			opacity: var(--o, 0);
+		}
+
+		&:checked {
+			--o: 1;
+		}
+	}
+
+	&+label {
+		font-size: 14px;
+		line-height: 21px;
+		display: inline;
+		vertical-align: top;
+		cursor: pointer;
+		margin-left: 4px;
+	}
+}
+
+input[type='radio'] {
+	border-radius: 50%;
+
+	&:after {
+		width: 19px;
+		height: 19px;
+		border-radius: 50%;
+		background: var(--active-inner);
+		opacity: 0;
+		transform: scale(var(--s, .7));
+	}
+
+	&:checked {
+		--s: .5;
+	}
+}
+
+ul {
+	margin: 12px;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	max-width: 320px;
+
+	li {
+		margin: 16px 0;
+		position: relative;
+	}
+}*/
+
+html {
+	box-sizing: border-box;
+}
