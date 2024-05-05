@@ -24,8 +24,7 @@ function userpopup() {
 //Validar form
 function validar() {
     let name = document.getElementById("name");
-    let clave = document.getElementById("clave");
-    let comment = document.getElementById("comment")
+    let comment = document.getElementById("comment");
     let error = false;
     document.getElementById("validar_usuario").innerHTML = "&nbsp;  ";
     document.getElementById("validar_comentario").innerHTML = "&nbsp; ";
@@ -38,12 +37,12 @@ function validar() {
     if (comment.value.length <= 20) {
         document.getElementById("validar_comentario").innerHTML = "¡Su comentario es muy corto!";
         error = true;
-        xommwnr.focus();
+        comment.focus();
 
     }
     if (error == false) {
 
-        document.getElementById("usuario").value = ""
+        document.getElementById("name").value = ""
         document.getElementById("validar_usuario").innerHTML = "&nbsp;";
         document.getElementById("comment").value = ""
         document.getElementById("validar_comentario").innerHTML = "&nbsp;";
