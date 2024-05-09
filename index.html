@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="./css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Holistico Nueva Luna</title>
@@ -40,7 +40,15 @@
                     <img src="" alt="imagen de cartas de tarot">
                 </div>
             </section>
-
+            <!--<div id="app">
+                <div v-for="elemento in datos" >
+                    <p>{{elemento.id}}</p>
+                    <p>{{elemento.description}}</p>
+                    <p>{{elemento.price}}</p>
+                    <img width="100" :src="elemento.image" :alt="elemento.title">
+                    <hr> << Linea horizontal
+                </div>
+            </div>-->
             <section class="slider">
                 <h2>Significado de los Arcanos</h2>
                 <div class="slider-contenedor">
@@ -48,7 +56,7 @@
                     <img src="imagen2.jpg" alt="Descripción de la imagen 2">
                     <img src="imagen3.jpg" alt="Descripción de la imagen 3">
                 </div>
-                
+
             </section>
 
             <section class="servicios">
@@ -68,19 +76,23 @@
         <!-- <aside class="sidebar">
             <h4>Acá va una sidebar</h4>
         </aside> -->
+        <!--Consumir con VUE--> 
         <div class="widget-1">
-            <h3>WIDGET 1</h3>
+            <small>Visitas totales: </small>
+            <img href='https://www.free-website-hit-counter.com'>
+                <img src='https://www.free-website-hit-counter.com/c.php?d=4&id=170513&s=1' alt='Free Website Hit Counter'></img>
+            </a>
+            <br>
         </div>
         <div class="widget-2">
             <h3>WIDGET 2</h3>
         </div>
-
         <footer class="footer" id="footer">
 
         </footer>
     </div> <!--cierra grid-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
 </body>
-<!-- <script src=""></script> Acá va un JS, si lo hubiese -->
-<script src="./js/main.js"></script>
 
 </html>

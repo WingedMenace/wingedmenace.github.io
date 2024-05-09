@@ -1,0 +1,25 @@
+[
+    {
+        "comentario random": "Mantener este formato para agregar datos. \n es new line",
+        "winery": "Maselva",
+        "wine": "Emporda 2012",
+        "rating": {
+            "average": "4.9",
+            "reviews": "88 ratings"
+        },
+        "location": "Spain\n·\nEmpordà",
+        "image": "https://images.vivino.com/thumbs/ApnIiXjcT5Kc33OHgNb9dA_375x500.jpg",
+        "id": 1
+    },
+    {
+        "winery": "Ernesto Ruffo",
+        "wine": "Amarone della Valpolicella Riserva N.V.",
+        "rating": {
+            "average": "4.9",
+            "reviews": "75 ratings"
+        },
+        "location": "Italy\n·\nAmarone della Valpolicella",
+        "image": "https://images.vivino.com/thumbs/nC9V6L2mQQSq0s-wZLcaxw_pb_x300.png",
+        "id": 2
+    }
+]
