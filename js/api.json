@@ -1,20 +1,134 @@
 [
     {
-        "comentario random": "Mantener este formato para agregar datos. \n es new line",
-        "winery": "Maselva",
-        "wine": "Emporda 2012",
-        "rating": {
-            "average": "4.9",
-            "reviews": "88 ratings"
-        },
-        "location": "Spain\n·\nEmpordà",
-        "image": "https://images.vivino.com/thumbs/ApnIiXjcT5Kc33OHgNb9dA_375x500.jpg",
-        "id": 999
+        "id": 0,
+        "carta": "La Emperatriz",
+        "significado": "Fertilidad, abundancia y amor maternal. Simboliza la creatividad, el éxito creativo y la belleza. Encarna el arquetipo de la madre tierra, por lo que se la relaciona con el atractivo femenino. Es la personificación del poder femenino.",
+        "imagen": "../img/0-Fool.png"
     },
     {
         "id": 1,
         "carta": "El Mago",
         "significado": "Poder creativo y personal. Es el primer arcano de la jerarquía y, por lo tanto, es el primer paso en la búsqueda de la sabiduría. Esta carta representa el alma del deseo, el primer escalón que debemos subir en busca de la autorrealización.",
         "imagen": "../img/1-Magician.png"
+    },
+    {
+        "id": 2,
+        "carta": "La Sacerdotisa",
+        "significado": "Conexión con el mundo espiritual y la energía femenina. Representa la intuición, la sabiduría interior y el conocimiento oculto. Además, se la relaciona con la capacidad de alcanzar objetivos y convertir en realidad deseos que parecían imposibles.",
+        "imagen": "../img/2-HighPriestess.png"
+    },
+    {
+        "id": 3,
+        "carta": "La Emperatriz",
+        "significado": "Fertilidad, abundancia y amor maternal. Simboliza la creatividad, el éxito creativo y la belleza. Encarna el arquetipo de la madre tierra, por lo que se la relaciona con el atractivo femenino. Es la personificación del poder femenino.",
+        "imagen": "../img/3-Empress.png"
+    },
+    {
+        "id": 4,
+        "carta": "El Emperador",
+        "significado": "Autoridad, estructura y liderazgo. Es la carta que simboliza el poder masculino, la protección y la estabilidad. Además, es un arquetipo de sabiduría antigua.",
+        "imagen": "../img/4-Emperor.png"
+    },
+    {
+        "id": 5,
+        "carta": "El Sumo Sacerdote",
+        "significado": "Espiritualidad, tradición y conocimiento. Representa la memoria, la guía espiritual y la conexión con lo divino. Es el arquetipo de la sabiduría y la pureza del alma.",
+        "imagen": "../img/5-Hierophant.png"
+    },
+    {
+        "id": 6,
+        "carta": "Los Enamorados",
+        "significado": "El amor, la elección y la armonía en las relaciones. Es la representación de la toma de decisiones y la unión espiritual. Esta carta personifica el deseo más allá de la razón.",
+        "imagen": "../img/6-Lovers.png"
+    },
+    {
+        "id": 7,
+        "carta": "El Carro",
+        "significado": "Éxito, avance y control. Representa la determinación para superar obstáculos y el logro de metas. Es el arquetipo del héroe, capaz de imponer su voluntad sobre el deseo.",
+        "imagen": "../img/7-Chariot.png"
+    },
+    {
+        "id": 8,
+        "carta": "La Fuerza",
+        "significado": "Fuerza interior, coraje y dominio de los impulsos. Simboliza la valentía, la compasión y la superación de obstáculos a través del amor. Su poder proviene del coraje. Es la cualidad que necesita el hombre para domesticar el ansia de poder.",
+        "imagen": "../img/8-Strength.png"
+    },
+    {
+        "id": 9,
+        "carta": "El Ermitaño",
+        "significado": "Autorreflexión, sabiduría interna y la búsqueda de respuestas. Es un símbolo de soledad voluntaria y guía interior. Se le relaciona con el Dios del tiempo, Saturno, por lo que se le retrata como un hombre viejo.",
+        "imagen": "../img/9-Hermit.png"
+    },
+    {
+        "id": 10,
+        "carta": "La Rueda de la Fortuna",
+        "significado": "Cambio, destino y oportunidades. Simboliza los ciclos de la vida y los cambios en la suerte. Es la encarnación de la indiferencia, inabordable por los destinos de quienes la rodean.",
+        "imagen": "../img/10-WheelFortune.png"
+    },
+    {
+        "id": 11,
+        "carta": "La Justicia",
+        "significado": "Equidad, equilibrio y honestidad. Simboliza la toma de decisiones justas, la legalidad y la responsabilidad personal. Esta carta representa la defensa de lo que es justo y equitativo.",
+        "imagen": "../img/11-Justice.png"
+    },
+    {
+        "id": 12,
+        "carta": "El Colgado",
+        "significado": "Entrega, renuncia y suspensión. Representa la necesidad de hacer sacrificios, ver las cosas desde una perspectiva diferente y aceptar la espera. Esta carta está relacionada con el dolor y la pérdida del ego que el alma necesita para completar su búsqueda espiritual.",
+        "imagen": "../img/12-HangedMan.png"
+    },
+    {
+        "id": 13,
+        "carta": "La Muerte",
+        "significado": "Cambio, transformación y renacimiento. No representa muerte literal. Es más bien la señal del final de una etapa y el comienzo de otra. Con ella debemos saber que no todo está perdido, quedan otras muchas cartas en la baraja.",
+        "imagen": "../img/13-Death.png"
+    },
+    {
+        "id": 14,
+        "carta": "La Templanza",
+        "significado": "Armonía, equilibrio y moderación. Simboliza la combinación de distintos elementos en la vida, y la búsqueda de la serenidad interior. Esta carta no nos pide que neguemos nuestras emociones ni apetitos, sino que los mantengamos bajo control.",
+        "imagen": "../img/14-Temperance.png"
+    },
+    {
+        "id": 15,
+        "carta": "El Diablo",
+        "significado": "Tentación, adicciones o cadenas autoimpuestas. Representa las fuerzas oscuras internas y la necesidad de liberarse de las limitaciones autoimpuestas. Es un recordatorio del dolor que espera a quienes no consiguen librarse de su vinculación a los deseos terrenales.",
+        "imagen": "../img/15-Devil.png"
+    },
+    {
+        "id": 16,
+        "carta": "La Torre",
+        "significado": "Cambio repentino, destrucción y revelación. Simboliza la demolición de estructuras falsas que permiten un renacimiento y un crecimiento real. Todo lo material es temporal, eso es lo que viene a recordarnos este arcano mayor.",
+        "imagen": "../img/16-Tower.png"
+    },
+    {
+        "id": 17,
+        "carta": "La Estrella",
+        "significado": "Esperanza, inspiración e iluminación. Es la representación de la conexión con el universo, la fe en el futuro y la guía divina. Esta carta inicia el ascenso místico del alma a través de los cuerpos celestes, en búsqueda de iluminación espiritual.",
+        "imagen": "../img/17-Star.png"
+    },
+    {
+        "id": 18,
+        "carta": "La Luna",
+        "significado": "Ciclos emocionales, imaginación e ilusiones. Representa aspectos emocionales, los sueños y la intuición. Simboliza el mundo de lo intuitivo y lo instintivo, así como la fluctuación de las emociones.",
+        "imagen": "../img/18-Moon.png"
+    },
+    {
+        "id": 19,
+        "carta": "El Sol",
+        "significado": "Vitalidad, energía y alegría. Simboliza la claridad, la abundancia y el éxito. Junto a la Luna, este arcano representa la fusión de la mente consciente y la mente inconsciente.",
+        "imagen": "../img/19-Sun.png"
+    },
+    {
+        "id": 20,
+        "carta": "El Juicio",
+        "significado": "Renovación, resurrección y evaluación. Simboliza el llamado a la transformación y la toma de decisiones que están basadas en la sabiduría que se ha adquirido.",
+        "imagen": "../img/20-Judgement.png"
+    },
+    {
+        "id": 21,
+        "carta": "El Mundo",
+        "significado": "Culminación, integración y la realización. Representa el logro de metas, la totalidad y la armonía con el universo. Esta carta también es un símbolo de la iluminación de la eternidad.",
+        "imagen": "../img/21-World.png"
     }
 ]
