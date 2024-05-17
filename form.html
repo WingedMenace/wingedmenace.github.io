@@ -9,55 +9,56 @@
 </head>
 
 <body>
+    <div class="container">
+        <header class="header" id="header"></header>
+        <main class="main">
+            <form id="form" onsubmit="return validar();">
+                <h1>Contáctanos</h1>
+                <label for="name">Nombre</label>
+                <input type='text' name='name' id='name' placeholder="Tu nombre aqui" />
+                <div id="validar_usuario" style="color:red;">&nbsp; </div>
 
-    <header class="header" id="header"></header>
-    <main class="main">
-        <form id="form" onsubmit="return validar();">
-            <h1>Contáctanos</h1>
-            <label for="name">Nombre</label>
-            <input type='text' name='name' id='name' placeholder="Tu nombre aqui" />
-            <div id="validar_usuario" style="color:red;">&nbsp; </div>
+                <label for="mail">Correo electrónico</label>
+                <input type='email' name='mail' id='mail' placeholder="Tu mail aqui" />
 
-            <label for="mail">Correo electrónico</label>
-            <input type='email' name='mail' id='mail' placeholder="Tu mail aqui" />
+                <ul class="radios">
+                    <li>
+                        <input type="radio" class="radio" name="intencion" value="">
+                        <label>Quiero adquirir productos</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="intencion" value="">
+                        <label>Quiero participar de un curso</label>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="intencion" value="">
+                        <label>Quiero dejar un comentario</label>
+                    </li>
+                </ul>
+                <label for="Encontrar">¿Cómo nos encontraste?</label>
+                <select name="encontrar" id="encontrar" required="">
+                    <option value="" selected="" disabled="">Selecciona</option>
+                    <option value="amigo">Recomendación de un amigo</option>
+                    <option value="internet">Búsqueda por internet</option>
+                    <option value="publicidad">Vi una publicidad</option>
+                    <option value="redes sociales">Encontraste nuestras redes</option>
+                </select>
+                <label for="comment">
+                    <div class="popup" onclick="userpopup()">Comentario
+                        <span class="popuptext" id="popup">¡Agradecemos tus comentarios!</span>
+                    </div>
+                </label>
 
-            <ul class="radios">
-                <li>
-                    <input type="radio" class="radio" name="intencion" value="">
-                    <label>Quiero adquirir productos</label>
-                </li>
-                <li>
-                    <input type="radio" class="radio" name="intencion" value="">
-                    <label>Quiero participar de un curso</label>
-                </li>
-                <li>
-                    <input type="radio" class="radio" name="intencion" value="">
-                    <label>Quiero dejar un comentario</label>
-                </li>
-            </ul>
-            <label for="Encontrar">¿Cómo nos encontraste?</label>
-            <select name="encontrar" id="encontrar" required="">
-                <option value="" selected="" disabled="">Selecciona</option>
-                <option value="amigo">Recomendación de un amigo</option>
-                <option value="internet">Búsqueda por internet</option>
-                <option value="publicidad">Vi una publicidad</option>
-                <option value="redes sociales">Encontraste nuestras redes</option>
-            </select>
-            <label for="comment">
-                <div class="popup" onclick="userpopup()">Comentario
-                    <span class="popuptext" id="popup">¡Agradecemos tus comentarios!</span>
-                </div>
-            </label>
-            </div>
-            <br>
-            <textarea rows="5" name="comentario" id="comment" placeholder="lorem x20"></textarea>
+                <br>
+                <textarea rows="5" name="comentario" id="comment" placeholder="lorem x20"></textarea>
 
-            <!--<input type='text' name='comentario' id='comment' placeholder="Mínimo 20 caracteres" />-->
-            <div id="validar_comentario" style="color:red;">&nbsp; </div>
-            <input type='submit' value='Enviar'><input type="reset" value="Reiniciar formulario">
-        </form>
-    </main>
-    <footer class="footer" id="footer"></footer>
+                <!--<input type='text' name='comentario' id='comment' placeholder="Mínimo 20 caracteres" />-->
+                <div id="validar_comentario" style="color:red;">&nbsp; </div>
+                <input type='submit' value='Enviar'><input type="reset" value="Reiniciar formulario">
+            </form>
+            <footer class="footer" id="footer"></footer>
+        </main>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 
