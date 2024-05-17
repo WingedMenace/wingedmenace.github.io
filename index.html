@@ -42,15 +42,6 @@
                     <img src="" alt="imagen de cartas de tarot">
                 </div>
             </section>
-            <div id="app" class="card" style="width: 18rem;"> <!--Tener en cuenta para el CSS-->
-                <div v-for="elemento in datos">
-                    <img width="100" :src="elemento.imagen" :alt="elemento.title" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">{{elemento.id}} - {{elemento.carta}}</h5>
-                        <p class="card-text">{{elemento.significado}}</p>
-                    </div>
-                </div>
-            </div>
             <!--<section class="slider">
                 <h2>Significado de los Arcanos</h2>
                 <div class="slider-contenedor">

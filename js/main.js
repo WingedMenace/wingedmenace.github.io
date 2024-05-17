@@ -1,8 +1,8 @@
 //document.querySelector("footer").innerHTML = 
 
 document.getElementById("footer").innerHTML = `
-Lorem ipsum dolor sit amet.
-<a href="mailto:mail@bue.gob.ar">Contacto</a>`;
+<p>Centro Holístico Nueva Luna</p>
+<a href="form.html">Contáctanos</a>`;
 
 document.querySelector("#header").innerHTML = `
 <img class="Logo" src="" alt="Logo">
@@ -10,10 +10,8 @@ document.querySelector("#header").innerHTML = `
 <nav class="nav" id="nav">
 <a href="index.html">Home</a>
 <a href="about.html">Sobre nosotros</a>
-<a href="form.html">Contáctanos</a>
 <a href="">Link de prueba</a>
-</nav>
-<p>Texto de ejemplo</p>`;
+</nav>`;
 
 //pop-up
 function userpopup() {
