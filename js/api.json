@@ -9,17 +9,12 @@
         },
         "location": "Spain\n·\nEmpordà",
         "image": "https://images.vivino.com/thumbs/ApnIiXjcT5Kc33OHgNb9dA_375x500.jpg",
-        "id": 1
+        "id": 999
     },
     {
-        "winery": "Ernesto Ruffo",
-        "wine": "Amarone della Valpolicella Riserva N.V.",
-        "rating": {
-            "average": "4.9",
-            "reviews": "75 ratings"
-        },
-        "location": "Italy\n·\nAmarone della Valpolicella",
-        "image": "https://images.vivino.com/thumbs/nC9V6L2mQQSq0s-wZLcaxw_pb_x300.png",
-        "id": 2
+        "id": 1,
+        "carta": "El Mago",
+        "significado": "Poder creativo y personal. Es el primer arcano de la jerarquía y, por lo tanto, es el primer paso en la búsqueda de la sabiduría. Esta carta representa el alma del deseo, el primer escalón que debemos subir en busca de la autorrealización.",
+        "imagen": "../img/1-Magician.png"
     }
 ]
