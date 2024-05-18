@@ -11,9 +11,6 @@
     font-style: normal;
 }
 
-body {
-    background-color: rgb(216, 238, 231);
-    color: black;
 }
 header{
     position: sticky;
@@ -52,15 +49,28 @@ header a:hover {
     background-color: aqua;
     padding: 5px;
 }*/
+body {
+	background-image: url('/img/image.webp');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 25%;
+	background-color: #efeee8;
+	background-position: bottom right;
+}
+
+.logo {
+	width: 3rem;
+}
+
 .nav {
 	text-align: center;
 	border-radius: 15px;
-	width: 400px;
+	width: 100%;
 	box-shadow: 10px 5px 8px rgb(166, 239, 244);
 	background-color: rgb(141, 244, 209);
 	margin: 15px auto;
 	padding: 8px;
-
+	position: top sticky;
 
 }
 
@@ -82,7 +92,6 @@ header a:hover {
 }
 
 .container>* {
-	background: #fff;
 	padding: 20px;
 	border-radius: 4px;
 }
@@ -413,8 +422,8 @@ ul {
 		margin: 16px 0;
 		position: relative;
 	}
-}*/
+}
 
-html {
+*/ html {
 	box-sizing: border-box;
 }

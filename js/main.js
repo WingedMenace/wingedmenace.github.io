@@ -5,12 +5,10 @@ document.getElementById("footer").innerHTML = `
 <a href="form.html">Contáctanos</a>`;
 
 document.querySelector("#header").innerHTML = `
-<img class="Logo" src="" alt="Logo">
-
 <nav class="nav" id="nav">
+<p><img class="logo" src="/img/logo.png" alt="Logo">Centro Holístico Nueva Luna</p>
 <a href="index.html">Home</a>
 <a href="about.html">Sobre nosotros</a>
-<a href="">Link de prueba</a>
 </nav>`;
 
 //pop-up
