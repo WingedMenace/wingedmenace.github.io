@@ -5,51 +5,54 @@ document.getElementById("footer").innerHTML = `
 <a href="form.html">Contáctanos</a>`;
 
 document.querySelector("#header").innerHTML = `
+<div class="navcont">
 <nav class="nav" id="nav">
-<p><img class="logo" src="/img/logo.png" alt="Logo">Centro Holístico Nueva Luna</p>
-<a href="index.html">Home</a>
-<a href="about.html">Sobre nosotros</a>
-</nav>`;
+<img class="logo" src="/img/logo.png" alt="Logo">
+<p>Centro Holístico Nueva Luna</p>
+    <a href="index.html">Home</a>
+    <a href="about.html">Sobre nosotros</a>
+  </nav>
+</div>`;
 
 //pop-up
 function userpopup() {
-    var popup = document.getElementById("popup");
-    popup.classList.toggle("show");
+  var popup = document.getElementById("popup");
+  popup.classList.toggle("show");
 }
 
 //Validar form
 //Falta validar mail (con regex?)
 function validar() {
-    let name = document.getElementById("name");
-    let comment = document.getElementById("comment");
-    let error = false;
-    document.getElementById("validar_usuario").innerHTML = "&nbsp;  ";
-    document.getElementById("validar_comentario").innerHTML = "&nbsp; ";
-    if (name.value == "") {
-        document.getElementById("validar_usuario").innerHTML = "Deje su nombre";
-        error = true;
-        name.focus();
+  let name = document.getElementById("name");
+  let comment = document.getElementById("comment");
+  let error = false;
+  document.getElementById("validar_usuario").innerHTML = "&nbsp;  ";
+  document.getElementById("validar_comentario").innerHTML = "&nbsp; ";
+  if (name.value == "") {
+    document.getElementById("validar_usuario").innerHTML = "Deje su nombre";
+    error = true;
+    name.focus();
 
-    }
-    if (comment.value.length <= 20) {
-        document.getElementById("validar_comentario").innerHTML = "¡Su comentario es muy corto!";
-        error = true;
-        comment.focus();
+  }
+  if (comment.value.length <= 20) {
+    document.getElementById("validar_comentario").innerHTML = "¡Su comentario es muy corto!";
+    error = true;
+    comment.focus();
 
-    }
-    if (error == false) {
+  }
+  if (error == false) {
 
-        document.getElementById("name").value = ""
-        document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-        document.getElementById("comment").value = ""
-        document.getElementById("validar_comentario").innerHTML = "&nbsp;";
-        window.alert("Dato enviado");
-        
-    }
-    else{
-        window.alert("Completa los campos adecuadamente")
-    }
-    return !error
+    document.getElementById("name").value = ""
+    document.getElementById("validar_usuario").innerHTML = "&nbsp;";
+    document.getElementById("comment").value = ""
+    document.getElementById("validar_comentario").innerHTML = "&nbsp;";
+    window.alert("Dato enviado");
+
+  }
+  else {
+    window.alert("Completa los campos adecuadamente")
+  }
+  return !error
 }
 
 //Consumo de API en VUE
@@ -77,8 +80,8 @@ createApp({
           this.error = true
         });
     }
-  },   
-created() {
-  this.fetchData(this.url)
-}
+  },
+  created() {
+    this.fetchData(this.url)
+  }
 }).mount('#app')
