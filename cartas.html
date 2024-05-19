@@ -11,19 +11,21 @@
 </head>
 
 <body>
-    <header id="header" class="header"></header>
-    <main class="main">
-        <div id="app" class="card" style="width: 18rem;"> <!--Tener en cuenta para el CSS-->
-            <div v-for="elemento in datos">
-                <img width="100" :src="elemento.imagen" :alt="elemento.title" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">{{elemento.id}} - {{elemento.carta}}</h5>
-                    <p class="card-text">{{elemento.significado}}</p>
+    <div class="container">
+        <header id="header" class="header"></header>
+        <main class="main">
+            <div id="app" class="card" style="width: 18rem;"> <!--Tener en cuenta para el CSS-->
+                <div v-for="elemento in datos">
+                    <img width="100" :src="elemento.imagen" :alt="elemento.title" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{elemento.id}} - {{elemento.carta}}</h5>
+                        <p class="card-text">{{elemento.significado}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <footer class="footer" id="footer"></footer>
-    </main>
+            <footer class="footer" id="footer"></footer>
+        </main>
+    </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
 </body>

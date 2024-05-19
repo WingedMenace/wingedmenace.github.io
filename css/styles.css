@@ -146,6 +146,12 @@ body {
 	min-height: 100px;
 	grid-area: sidebar;
 }
+#aboutImg{
+	position: relative;
+	width: 50vw;
+	height: auto;
+	margin: 0px;
+}
 
 .widget-1,
 .widget-2 {
