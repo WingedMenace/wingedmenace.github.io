@@ -21,20 +21,31 @@ function userpopup() {
 }
 
 //Validar form
-//Falta validar mail (con regex?)
 function validar() {
   let name = document.getElementById("name");
+  let mail = document.getElementById("mail");
   let comment = document.getElementById("comment");
   let error = false;
   document.getElementById("validar_usuario").innerHTML = "&nbsp;  ";
+  document.getElementById("validar_mail").innerHTML = "&nbsp; ";
   document.getElementById("validar_comentario").innerHTML = "&nbsp; ";
   if (name.value == "") {
-    document.getElementById("validar_usuario").innerHTML = "Deje su nombre";
+    document.getElementById("validar_usuario").innerHTML = "¡No olvides tu nombre!";
     error = true;
     name.focus();
 
   }
-  if (comment.value.length <= 20) {
+  let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (mail.value.match(mailFormat)) {
+    return true
+  } 
+  else {
+    document.getElementById("validar_mail").innerHTML = "Coloca tu dirección de mail correctamente";
+    error = true;
+    name.focus();
+
+  }
+  if (comment.value.length < 20) {
     document.getElementById("validar_comentario").innerHTML = "¡Su comentario es muy corto!";
     error = true;
     comment.focus();
@@ -44,9 +55,11 @@ function validar() {
 
     document.getElementById("name").value = ""
     document.getElementById("validar_usuario").innerHTML = "&nbsp;";
+    document.getElementById("mail").value = ""
+    document.getElementById("validar_mail").innerHTML = "&nbsp;";
     document.getElementById("comment").value = ""
     document.getElementById("validar_comentario").innerHTML = "&nbsp;";
-    window.alert("Dato enviado");
+    window.alert("Datos enviados");
 
   }
   else {
@@ -60,7 +73,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      url: "/js/api.json", //Colocar source de la API. Puede ser archivo local en JSON
+      url: "/js/api.json", //Es una API local
       datos: [],
       error: false,
     }
