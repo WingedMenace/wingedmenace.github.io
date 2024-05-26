@@ -25,23 +25,27 @@
 
                 <ul class="radios">
                     <li>
-                        <input type="radio" class="radio" name="intencion" value="">
+                        <div id="validar_radiosf" style="color:red;">&nbsp; </div>
+                    </li>
+                    <li>
+                        <input type="radio" class="radio" name="intencion" id="intencion" value="">
                         <label>Quiero adquirir productos</label>
                     </li>
                     <li>
-                        <input type="radio" class="radio" name="intencion" value="">
+                        <input type="radio" class="radio" name="intencion" id="intenciond" value="">
                         <label>Quiero participar de un curso</label>
                     </li>
                     <li>
-                        <input type="radio" class="radio" name="intencion" value="">
+                        <input type="radio" class="radio" name="intencion" id="intenciont" value="">
                         <label>Quiero dejar un comentario</label>
                     </li>
                 </ul>
-                <br>
+
 
                 <label for="Encontrar">¿Cómo nos encontraste?</label>
-                <select name="encontrar" id="encontrar"> <!--required="" -->
-                    <option value="" selected="" disabled="">Selecciona</option>
+                <div id="validar_encontrar" style="color:red;">&nbsp; </div>
+                <select name="encontrar" id="encontrar">
+                    <option value="Default" selected="" disabled="">Selecciona</option>
                     <option value="amigo">Recomendación de un amigo</option>
                     <option value="internet">Búsqueda por internet</option>
                     <option value="publicidad">Vi una publicidad</option>

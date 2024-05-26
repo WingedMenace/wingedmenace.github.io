@@ -24,43 +24,66 @@ function userpopup() {
 function validar() {
   let name = document.getElementById("name");
   let mail = document.getElementById("mail");
+  let intencion = document.getElementById("intencion");
+  let intenciond = document.getElementById("intenciond");
+  let intenciont = document.getElementById("intenciont");
+  let encontrar = document.getElementById("encontrar");
   let comment = document.getElementById("comment");
   let error = false;
   document.getElementById("validar_usuario").innerHTML = "&nbsp;  ";
   document.getElementById("validar_mail").innerHTML = "&nbsp; ";
+  document.getElementById("validar_radiosf").innerHTML = "&nbsp;";
+  document.getElementById("validar_encontrar").innerHTML = "&nbsp;";
   document.getElementById("validar_comentario").innerHTML = "&nbsp; ";
+
   if (name.value == "") {
     document.getElementById("validar_usuario").innerHTML = "¡No olvides tu nombre!";
     error = true;
     name.focus();
-
   }
+
   let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (mail.value.match(mailFormat)) {
-    return true
-  } 
+  }
   else {
     document.getElementById("validar_mail").innerHTML = "Coloca tu dirección de mail correctamente";
     error = true;
-    name.focus();
-
+    mail.focus();
   }
+
+  let x = 0
+  if (intencion.checked) {
+    x++;
+  }
+  if (intenciond.checked) {
+    x++;
+  }
+  if (intenciont.checked) {
+    x++;
+  }
+  if (x == 0) {
+    document.getElementById("validar_radiosf").innerHTML = "No olvides seleccionar la intencion del contacto";
+    error = true;
+    intencion.focus();
+  }
+
+
+  if (encontrar.value == "Default") {
+    document.getElementById("validar_encontrar").innerHTML = "Selecciona cómo nos encontraste";
+    error = true;
+    encontrar.focus();
+  }
+
   if (comment.value.length < 20) {
     document.getElementById("validar_comentario").innerHTML = "¡Su comentario es muy corto!";
     error = true;
     comment.focus();
-
   }
+
+
   if (error == false) {
-
-    document.getElementById("name").value = ""
-    document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-    document.getElementById("mail").value = ""
-    document.getElementById("validar_mail").innerHTML = "&nbsp;";
-    document.getElementById("comment").value = ""
-    document.getElementById("validar_comentario").innerHTML = "&nbsp;";
     window.alert("Datos enviados");
-
+    window.location.reload()
   }
   else {
     window.alert("Completa los campos adecuadamente")
