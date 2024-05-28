@@ -1,29 +1,44 @@
 * {
+	padding: 0px;
+	border: 0px;
 	font-family:
-		/*"Caveat", cursive,*/
-		Verdana, Geneva, Tahoma, sans-serif;
+		"Caveat", cursive, Verdana, Geneva, Tahoma, sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
 }
 
 body {
-	background-image: url('/img/image.webp');
+	background-image: url('/img/logo.png');
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 25%;
-	background-color: #efeee8;
+	background-attachment:fixed;
+	background-size: 30%;
+	background-color: wheat;
 	background-position: bottom right;
+	/* filter: saturate(1.8) brightness(1) hue-rotate(60); */
 }
 
+
+
+
 .logo {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 }
 
 /*grid*/
 .gcontainer {
-	width: 95%;
+	padding: 0px;
+	margin: 0px;
+	border: white 2px solid;
+	display: flex; 
+	flex-direction: row; 
+	align-items: flex-start; 
+	margin-bottom: 20px;
+	background: royalblue;
+	color: #fff;
+	border-radius: 20px;
+	width: 90%;
 	max-width: 1000px;
 	margin: 20px auto;
 	display: grid;
@@ -46,6 +61,9 @@ body {
 	flex-flow: row wrap;
 	gap: 5px;
 	place-content: flex-start center;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .card {
@@ -69,17 +87,19 @@ body {
 	grid-template-columns: auto auto auto;
 	grid-template-areas:
 	"card	card	card";
-  }
+}
 
 .header {
 	position: sticky;
 	z-index: 99;
 	top: 0;
-	background: #12203E;
-	color: #fff;
+	background: royalblue;
+	color: white;
 	grid-area: header;
 	padding: 0px;
 	margin: 0px;
+	border-radius: 15px;
+	border: white 2px solid;
 }
 
 .navcont {
@@ -91,8 +111,8 @@ body {
 	overflow: hidden;
 	border-radius: 10px;
 	width: 100%;
-	box-shadow: 10px 5px 8px rgb(166, 239, 244);
-	margin: 5px auto;
+	/* box-shadow: 10px 5px 8px rgb(166, 239, 244); */
+	/* margin: 5px auto; */
 	padding: 0px;
 }
 
@@ -112,25 +132,119 @@ body {
 
 .nav a {
 	float: left;
-	color: #f2f2f2;
+	color: white;
 	text-align: center;
 	padding: 16px 14px;
 	text-decoration: none;
 	font-size: 17px;
+	border-radius: 20px;
+	font-weight: bold;
 }
 
 .nav a:hover {
-	background-color: #197099;
-	color: black;
+	background-color: white;
+	color: royalblue;
+	font-weight: bold;
+}
+
+.nav h2{
+	display:block;
 }
 
 .main {
 	grid-area: main;
 }
 
+.enlaces a{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 0.7em;
+}
+
+h1{
+	font-size: 3em;
+	text-align: center;
+}
+
+h2, h3{
+	font-size: 2em;
+}
+
+section{
+	background: royalblue;
+	color: black;
+	padding: 0px;
+	margin: 0px;
+	border-radius: 20px;
+	border: white 3px solid;
+	display: flex; 
+	flex-direction: row; 
+	align-items: flex-start; 
+	margin-bottom: 20px; 
+}
+
+.boton {
+	display: inline-block;
+	border: 2px solid white;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: royalblue;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.boton:hover {
+	background-color: white;
+	color: royalblue;
+	font-weight: bold;
+}
+
+.texto-izquierda {
+	background-image: url("../img/fondoletras.png");
+	background-size: cover; 
+	text-align: center;
+	flex: 1;
+	padding: 20px;
+  	box-sizing: border-box; 
+}
+
+.img-derecha {
+	width: 50%;
+	text-align: center;
+}
+
+.img-derecha img {
+	max-width: 100%; 
+	height: auto;
+}
+
+.whatsapp-button {
+	display: inline-block;
+	width: 60px; 
+	height: 60px; 
+	background-color: #25D366; 
+	color: white;
+	text-align:center;
+	align-items: center;
+	line-height: 70px; /* Alinea el texto verticalmente */
+	border-radius: 50%;
+	position: fixed;
+	bottom: 50px; /* Ajusta la posición vertical */
+	right: 40px; /* Ajusta la posición horizontal */
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); /* Sombra para dar profundidad */
+}
+	
+
 .sidebar {
 	grid-column: 3 / 4;
-	background: #fAA43D;
+	background: gold;
 
 	display: flex;
 	align-items: center;
@@ -167,8 +281,12 @@ body {
 }
 
 .footer {
-	background: #12203E;
+	padding: 0px;
+	margin: 0px;
+	border: white 2px solid;
+	background: royalblue;
 	color: #fff;
+	border-radius: 20px;
 	grid-area: footer;
 }
 

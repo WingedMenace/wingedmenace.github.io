@@ -1,16 +1,23 @@
 //document.querySelector("footer").innerHTML = 
 
 document.getElementById("footer").innerHTML = `
-<p>Centro Holístico Nueva Luna</p>
-<a href="form.html">Contáctanos</a>`;
+<h3>Centro Holístico Nueva Luna</h3>
+<a href="https://wa.me/+5493487660068?text=MENSAJE_OPCIONAL" target="_blank" class="whatsapp-button" >
+<i class="fa-solid fa-phone fa-2x"></i>
+</a>
+<a class="boton" href="form.html">Contáctanos</a>`;
 
 document.querySelector("#header").innerHTML = `
 <div class="navcont">
 <nav class="nav" id="nav">
 <img class="logo" src="/img/logo.png" alt="Logo">
-<p>Centro Holístico Nueva Luna</p>
+<h1>Centro Holístico Nueva Luna</h1>
+    <div class="enlaces">
     <a href="index.html">Home</a>
+    <a href="cartas.html">Significado Cartas</a>
     <a href="about.html">Sobre nosotros</a>
+    <a href="form.html">Contacto</a>
+    </div>
   </nav>
 </div>`;
 
