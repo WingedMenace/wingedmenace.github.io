@@ -15,22 +15,24 @@
     <div class="gcontainer">
         <header id="header" class="header"></header>
         <main class="main">
-            <div id="app" class="caja">
-                <div v-for="elemento in datos">
-                    <div class="card-group">
-                        <div class="card" id="card">
-                            <img :src="elemento.imagen" :alt="elemento.title" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title">{{elemento.id}} - {{elemento.carta}}</h5>
-                                <p class="card-text">{{elemento.significado}}</p>
-                                <div class="card-footer">
-                                    <a href="#" class="btn btn-secondary disabled">Sin stock</a>
+            <section>
+                <div id="app" class="caja">
+                    <div v-for="elemento in datos">
+                        <div class="card-group">
+                            <div class="card" id="card">
+                                <img :src="elemento.imagen" :alt="elemento.title" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{elemento.id}} - {{elemento.carta}}</h5>
+                                    <p class="card-text">{{elemento.significado}}</p>
+                                    <div class="card-footer">
+                                        <a href="#" class="btn btn-secondary disabled">Sin stock</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </main>
         <footer class="footer" id="footer"></footer>
     </div>
