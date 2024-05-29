@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="gcontainer">
+    <div class="qcontainer">
         <header class="header" id="header"></header>
         <main class="main">
             <form id="form" onsubmit="return validar();">
@@ -66,8 +66,11 @@
                 <div id="validar_comentario" style="color:red;">&nbsp; </div>
                 <textarea rows="5" name="comentario" id="comment" placeholder="Mímimo 20 caracteres"></textarea>
 
-
                 <input type="image" src="/img/triangle.png" alt="Enviar" width="50" height="50">
+                <div class="popup" onclick="userpopup2()"> <h2>Enviar</h2>
+                    <span class="popuptext" id="popup2">Usa el avioncito</span>
+                </div>
+
             </form>
             <footer class="footer" id="footer"></footer>
         </main>

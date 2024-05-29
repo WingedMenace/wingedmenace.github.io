@@ -10,8 +10,7 @@ document.getElementById("footer").innerHTML = `
 document.querySelector("#header").innerHTML = `
 <div class="navcont">
 <nav class="nav" id="nav">
-<img class="logo" src="/img/logo.png" alt="Logo">
-<h1>Centro Holístico Nueva Luna</h1>
+<h1><img class="logo" src="/img/logo.png" alt="Logo">Centro Holístico Nueva Luna</h1>
     <div class="enlaces">
     <a href="index.html">Home</a>
     <a href="cartas.html">Significado Cartas</a>
@@ -24,6 +23,11 @@ document.querySelector("#header").innerHTML = `
 //pop-up
 function userpopup() {
   var popup = document.getElementById("popup");
+  popup.classList.toggle("show");
+}
+
+function userpopup2() {
+  var popup = document.getElementById("popup2");
   popup.classList.toggle("show");
 }
 
