@@ -2,7 +2,7 @@
 	padding: 0px;
 	border: 0px;
 	font-family:
-		"Caveat", cursive, Verdana, Geneva, Tahoma, sans-serif;
+		"Caveat",  Verdana, Geneva, Tahoma, sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
@@ -238,7 +238,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	word-wrap: normal;
-
+	margin-right: 3px;
 	min-height: 100px;
 	grid-area: sidebar;
 }

@@ -8,3 +8,7 @@ La API de estas cartas está siendo consumida con VUE.js
 Desde el footer de todas las páginas se puede acceder al formulario de contacto, validado con JS. El mail está validado con RegEx de tal forma que acepte correos electrónicos en el formato estándar actual. El sector de comentarios admite no menos de 20 caracteres. El botón "submit" es una imagen tal como se pide y se añadió como adicional un botón "reiniciar formulario". El formulario cumple con los requisitos de tener un select y un radiobutton (que fue diseñado como una media luna con CSS). La animación está en el popup que salta al interactuar con "Comentario" y con "Enviar"
 
 Header y footer están en el JS, con comentarios de referencia.
+
+-Errores-
+- Al inspeccionar en el navegador, sale un error de VUE. Esto es porque se usa en el JS pero solo se usa en /cartas. En el mismo, el error cambia a que se está usando una versión de desarrollo y se recomienda prod; originado por usar el VUE por cdn. No afecta la funcionalidad
+- En la página principal hay un inconveniente con los fondos de las imágenes de la sección izquierda
