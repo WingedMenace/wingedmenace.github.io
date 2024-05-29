@@ -40,10 +40,10 @@ body {
 	grid-template-rows: auto auto auto auto;
 	/*repeat(4, auto);*/
 	grid-template-areas:
-		"header    header    "
-		"main      main      "
-		"widget-1  widget-2  "
-		"footer    footer    ";
+		"header    header   "
+		"main      main     "
+		"widget-1  widget-2 "
+		"footer    footer   ";
 }
 
 /*flex*/
@@ -232,12 +232,12 @@ section {
 
 
 .sidebar {
-	grid-column: 3 / 4;
-	background: gold;
-
+	height: 100%;
+	background: #55a8fd;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	word-wrap: normal;
 
 	min-height: 100px;
 	grid-area: sidebar;
@@ -279,6 +279,35 @@ section {
 	grid-area: footer;
 }
 
+/*Responsive*/
+.contenedor {
+	padding: 0px;
+	margin: 0px;
+	border: white 2px solid;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-bottom: 20px;
+	background: #25688a;
+	color: #fff;
+	border-radius: 20px;
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: auto auto;
+	/*repeat(2, auto);*/
+	grid-template-rows: auto auto auto auto;
+	/*repeat(4, auto);*/
+	grid-template-areas:
+		"header    header   header "
+		"main      main      sidebar"
+		"widget-1  widget-2  sidebar"
+		"footer    footer    footer";
+}
+
+
 @media screen and (max-width: 900px) {
 	.contenedor {
 		grid-template-areas: "header header header"
@@ -292,8 +321,8 @@ section {
 @media screen and (max-width: 768px) {
 	.contenedor {
 		grid-template-areas: "header header header"
-			"main main main"
 			"sidebar sidebar sidebar"
+			"main main main"
 			"widget-1 widget-1 widget-2"
 			"footer footer footer";
 	}
