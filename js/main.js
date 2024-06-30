@@ -138,7 +138,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:'https://wingedmenace.pythonanywhere.com/api',
+        url:"https://wingedmenace.pythonanywhere.com/api",
         productos:[],
         error:false,
         cargando:true,
