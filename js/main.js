@@ -139,7 +139,7 @@ const { createApp } = Vue
     data() {
       return {
         url:"https://wingedmenace.pythonanywhere.com/api",
-        productos:[],
+        datos:[],
         error:false,
         cargando:true,
         id: 0,
@@ -155,7 +155,7 @@ const { createApp } = Vue
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    this.productos = data;
+                    this.datos = data;
                     this.cargando=false
                 })
                 .catch(err => {
