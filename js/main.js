@@ -138,8 +138,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        api:[],
         url:'https://wingedmenace.pythonanywhere.com/api',
+        productos:[],
         error:false,
         cargando:true,
         /*atributos para el guardar los valores del formulario */
