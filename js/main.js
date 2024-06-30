@@ -142,7 +142,6 @@ const { createApp } = Vue
         productos:[],
         error:false,
         cargando:true,
-        /*atributos para el guardar los valores del formulario */
         id: 0,
         carta: "",
         significado: "",
@@ -177,7 +176,7 @@ const { createApp } = Vue
                 })
         },
         grabar(){
-            let producto = {
+            let prod = {
                 carta: this.carta,
                 significado: this.significado,
                 imagen: this.imagen,
@@ -185,7 +184,7 @@ const { createApp } = Vue
                 stock: this.stock,
             }
             var options = {
-                body:JSON.stringify(producto),
+                body:JSON.stringify(prod),
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 redirect: 'follow'
