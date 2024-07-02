@@ -104,14 +104,14 @@ body {
 	overflow: hidden;
 	border-radius: 10px;
 	width: 100%;
-	box-shadow: 10px 5px 8px rgb(166, 239, 244);
+	/* box-shadow: 10px 5px 8px rgb(166, 239, 244); */
 	margin: 5px auto;
 	padding: 0px;
 }
 
 .logo {
-	width: 1em;
-	height: 1em;
+	width: 2em;
+	height: 2em;
 	margin: 0%;
 }
 
@@ -131,7 +131,7 @@ body {
 	text-align: center;
 	padding: 16px 14px;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 1em;
 	border-radius: 20px;
 	font-weight: bold;
 }
@@ -223,6 +223,7 @@ section {
 }
 
 .whatsapp-button {
+	font-size: 50px;
 	display: inline-block;
 	width: 60px;
 	height: 60px;
@@ -289,8 +290,15 @@ section {
 	color: #fff;
 	border-radius: 20px;
 	grid-area: footer;
+	justify-content: space-between;
 }
 
+.redesSociales{
+	display: inline-block;
+	justify-content: space-between;
+	padding-left: 10px;
+	color: white;
+}
 /*Responsive*/
 .contenedor {
 	padding: 0px;
@@ -575,6 +583,15 @@ form .validation {
 
 /* Estilos para el menú móvil */
 /* Estilos generales */
+
+.badmin{
+	display: none;
+}
+
+.badmin.active{
+	display: flex;
+}
+
 .navcont nav {
     display: flex; /* Mostrar el menú original por defecto */
     z-index: 1; /* Asegurar que el menú original esté en el nivel correcto */
@@ -584,6 +601,8 @@ form .validation {
     display: none; /* Ocultar el menú móvil por defecto */
     z-index: 2; /* Asegurar que el menú móvil se superponga al original */
     position: relative;
+    justify-content: space-between; /* Añadir esta línea para espaciar los elementos */
+    padding: 0 1em; /* Añadir espacio horizontal si es necesario */
 }
 
 div#sliderMenu.sliderMenu.active{
@@ -599,7 +618,7 @@ div#sliderMenu.sliderMenu.active{
 	border: white 2px solid;
 }
 
-.enlacesMovil a{
+.enlacesMovil a {
 	float: left;
 	color: white;
 	text-align: center;
@@ -610,7 +629,7 @@ div#sliderMenu.sliderMenu.active{
 	font-weight: bold;
 }
 
-.enlacesMovil a:hover{
+.enlacesMovil a:hover {
 	background-color: white;
 	color: royalblue;
 	font-weight: bold;
@@ -623,11 +642,10 @@ div#sliderMenu.sliderMenu.active{
         display: none; /* Ocultar el menú original en pantallas pequeñas */
     }
 
-
     .menu-bar-movil {
         display: flex; /* Mostrar el menú móvil en pantallas pequeñas */
         align-items: center;
-        justify-content: space-between;
+        justify-content: end; /* Alinea los elementos a los extremos */
     }
 
     .sliderMenu {
@@ -655,6 +673,7 @@ div#sliderMenu.sliderMenu.active{
 
     .logobar {
         display: none; /* Ocultar lo que sea .logobar en pantallas pequeñas, si no es necesario en tu caso elimínalo */
+		height: 50px;
     }
 }
 
@@ -671,4 +690,5 @@ div#sliderMenu.sliderMenu.active{
     .sliderMenu {
         display: none; /* Asegura que el slider del menú móvil no se muestra en pantallas grandes */
     }
+
 }

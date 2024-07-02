@@ -3,9 +3,13 @@
 document.getElementById("footer").innerHTML = `
 <h3>Centro Holístico Nueva Luna</h3>
 <a href="https://wa.me/+5493487660068?text=MENSAJE_OPCIONAL" target="_blank" class="whatsapp-button" >
-<i class="fa-solid fa-phone fa-2x"></i>
+<i class="fa-brands fa-whatsapp"></i>
 </a>
-<a class="boton" href="form.html">Contáctanos</a>`;
+<a class="boton" href="form.html">Contáctanos</a>
+<a class="redesSociales" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+<a class="redesSociales" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a class="redesSociales" href="https://www.linkedin.com/?trk=guest_homepage-jobseeker_nav-header-logo" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+<a class="redesSociales" href="https://wa.me/+5493487660068?text=MENSAJE_OPCIONAL" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>`;
 
 document.querySelector("#header").innerHTML = `
 <div class="navcont">
@@ -17,18 +21,21 @@ document.querySelector("#header").innerHTML = `
       <a href="about.html">Sobre nosotros</a>
       <a href="form.html">Contacto</a>
       <a href="admininiciar.html">Iniciar Sesion<a/>
+      <a class="badmin" href="prod_new.html">Agregar Producto<a/>
+      <a class="badmin" href="prod.html">Productos<a/>
     </div>
   </nav>
 </div>
 
 <div class="navcont">
     <div class="menu-bar-movil">
-        <img class="logobar" src="/img/logo.png" alt="Logo">
+    <div>
+      <img class="logobar" src="/img/logo.png" alt="Logo">
 
         <div class="burger-menu" id="burger_menu">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
-
+    </div>
         <div class="sliderMenu" id="sliderMenu">
             <div class="top-redes">
                 <div class="enlacesMovil">
@@ -37,17 +44,10 @@ document.querySelector("#header").innerHTML = `
                   <a href="about.html">Sobre nosotros</a>
                   <a href="form.html">Contacto</a>
                   <a href="admininiciar.html">Iniciar Sesion<a/>
+                  <a class="badmin" href="prod_new.html">Agregar Producto<a/>
+                  <a class="badmin" href="prod.html">Productos<a/>
                 </div>
-                <!-- Opcional: Agregar enlaces a redes sociales aquí -->
             </div>
-
-            <nav class="menu-principal">
-                <a href="index.html">Home</a>
-                <a href="cartas.html">Significado Cartas</a>
-                <a href="about.html">Sobre nosotros</a>
-                <a href="form.html">Contacto</a>
-                <a href="admininiciar.html">Iniciar Sesion</a>
-            </nav>
         </div>
     </div>
 </div>`;
