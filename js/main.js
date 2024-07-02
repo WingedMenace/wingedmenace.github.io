@@ -12,12 +12,44 @@ document.querySelector("#header").innerHTML = `
 <nav class="nav" id="nav">
 <h1><img class="logo" src="/img/logo.png" alt="Logo">Centro Holístico Nueva Luna</h1>
     <div class="enlaces">
-    <a href="index.html">Home</a>
-    <a href="cartas.html">Significado Cartas</a>
-    <a href="about.html">Sobre nosotros</a>
-    <a href="form.html">Contacto</a>
+      <a href="index.html">Home</a>
+      <a href="cartas.html">Significado Cartas</a>
+      <a href="about.html">Sobre nosotros</a>
+      <a href="form.html">Contacto</a>
+      <a href="admininiciar.html">Iniciar Sesion<a/>
     </div>
   </nav>
+</div>
+
+<div class="navcont">
+    <div class="menu-bar-movil">
+        <img class="logobar" src="/img/logo.png" alt="Logo">
+
+        <div class="burger-menu" id="burger_menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+
+        <div class="sliderMenu" id="sliderMenu">
+            <div class="top-redes">
+                <div class="enlacesMovil">
+                  <a href="index.html">Home</a>
+                  <a href="cartas.html">Significado Cartas</a>
+                  <a href="about.html">Sobre nosotros</a>
+                  <a href="form.html">Contacto</a>
+                  <a href="admininiciar.html">Iniciar Sesion<a/>
+                </div>
+                <!-- Opcional: Agregar enlaces a redes sociales aquí -->
+            </div>
+
+            <nav class="menu-principal">
+                <a href="index.html">Home</a>
+                <a href="cartas.html">Significado Cartas</a>
+                <a href="about.html">Sobre nosotros</a>
+                <a href="form.html">Contacto</a>
+                <a href="admininiciar.html">Iniciar Sesion</a>
+            </nav>
+        </div>
+    </div>
 </div>`;
 
 //pop-up

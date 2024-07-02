@@ -58,17 +58,29 @@ body {
 	padding-right: 20px;
 }
 
-.card {
-	background: none;
+.caja {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas filas si no hay espacio */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px;
 }
 
-.caja {
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: auto auto auto;
-	grid-template-areas:
-		"card	card	card";
+.card {
+    flex: 1 1 200px; /* Permite que las tarjetas se ajusten hasta un mínimo de 200px */
+    max-width: 200px; /* Limita el tamaño máximo de las tarjetas */
+    min-width: 100px; /* Establece un tamaño mínimo para las tarjetas */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
+
+
 
 .header {
 	position: sticky;
@@ -440,194 +452,223 @@ section {
 		"footer    footer    ";
 }
 
-form input,
-form select,
-form textarea,
+/* Formulario */
+form {
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+form h1 {
+    font-size: 2.5em;
+    color: #25688a;
+    margin-bottom: 1em;
+}
+
 form label {
-	font-size: 1.25em;
-	color: black;
-	border: none;
-	border-radius: 0;
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin: 0;
+	font-family:
+		Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    margin: 1em 0 0.5em;
+    color: #333;
 }
 
-form label,
-form legend {
-	font-size: 1.25rem;
-	margin-bottom: 0.5rem;
+legend{
+	font-family:
+		Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* border, padding, margin, width */
 form input,
 form select,
 form textarea {
-	box-sizing: border-box;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	background-color: rgba(255, 255, 255, 0.9);
-	padding: 0.75em 1rem;
-	margin-bottom: 1.5rem;
+	font-family:
+		Verdana, Geneva, Tahoma, sans-serif;
+    width: 75%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
 }
 
+.radioInt{
+	bottom: 20px;
+	right: -200px;
+	position: relative;
+}
+
+form option{
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 form input:focus,
 form select:focus,
 form textarea:focus {
+    border-color: #25688a;
+    outline: none;
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+form fieldset legend {
+    font-weight: bold;
+    color: #25688a;
+    margin-bottom: 0.5em;
+}
+
+form fieldset label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form .validation {
+    color: red;
+    font-size: 0.875em;
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+.boton {
+    display: inline-block;
+    border: 2px solid #25688a;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #25688a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-right: 1em;
+}
+
+.boton:hover {
+    background-color: white;
+    color: #25688a;
+    border-color: #25688a;
+}
+
+.boton.enviar {
+    background-color: #25688a;
+    border-color: #25688a;
+}
+
+.boton.reset {
+    background-color: #ddd;
+    border-color: #ddd;
+    color: #333;
+}
+
+.boton.reset:hover {
+    background-color: white;
+    color: #333;
+    border-color: #333;
+}
+
+/* Estilos para el menú móvil */
+/* Estilos generales */
+.navcont nav {
+    display: flex; /* Mostrar el menú original por defecto */
+    z-index: 1; /* Asegurar que el menú original esté en el nivel correcto */
+}
+
+.menu-bar-movil {
+    display: none; /* Ocultar el menú móvil por defecto */
+    z-index: 2; /* Asegurar que el menú móvil se superponga al original */
+    position: relative;
+}
+
+div#sliderMenu.sliderMenu.active{
+	position: sticky;
+	z-index: 99;
+	top: 0;
+	background: #25688a;
+	color: white;
+	grid-area: header;
+	padding: 0px;
+	margin: 0px;
+	border-radius: 15px;
+	border: white 2px solid;
+}
+
+.enlacesMovil a{
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 16px 14px;
+	text-decoration: none;
+	font-size: 17px;
+	border-radius: 20px;
+	font-weight: bold;
+}
+
+.enlacesMovil a:hover{
 	background-color: white;
-	outline-style: solid;
-	outline-width: thin;
-	outline-color: gray;
-	outline-offset: -1px;
+	color: royalblue;
+	font-weight: bold;
 }
 
-form [type="text"],
-form [type="email"] {
-	width: 100%;
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    .navcont nav {
+        display: none; /* Ocultar el menú original en pantallas pequeñas */
+    }
+
+
+    .menu-bar-movil {
+        display: flex; /* Mostrar el menú móvil en pantallas pequeñas */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .sliderMenu {
+        display: none; /* Ocultar el slider del menú móvil por defecto */
+        position: absolute;
+        top: 60px; /* Ajusta esto según el tamaño de tu encabezado */
+        right: 0;
+        background-color: white;
+        width: 100%; /* Ajusta esto según tus necesidades */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        padding: 20px;
+        z-index: 3; /* Asegura que el menú móvil se superponga */
+    }
+
+    .sliderMenu.active {
+        display: flex; /* Mostrar el slider del menú móvil cuando está activo */
+    }
+
+    .menu-principal a {
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+
+    .logobar {
+        display: none; /* Ocultar lo que sea .logobar en pantallas pequeñas, si no es necesario en tu caso elimínalo */
+    }
 }
 
-form [type="image"] {
-	width: auto;
-	padding: 0;
-	border: none;
-	background: none;
-}
+/* Media query para pantallas grandes */
+@media (min-width: 769px) {
+    .navcont nav {
+        display: flex; /* Asegura que el menú original se muestra en pantallas grandes */
+    }
 
-form [type="button"],
-form [type="submit"],
-form [type="reset"] {
-	width: auto;
-	display: inline-flex;
-	cursor: pointer;
-}
+    .menu-bar-movil {
+        display: none; /* Oculta el menú móvil en pantallas grandes */
+    }
 
-form [type="button"]:focus,
-form [type="submit"]:focus,
-form [type="reset"]:focus {
-	outline: none;
-}
-
-form select {
-	text-transform: none;
-}
-
-/*radio*/
-input[type='radio'] {
-	--active: #275EFE;
-	--active-inner: #fff;
-	--focus: 2px rgba(39, 94, 254, .3);
-	--border: #BBC1E1;
-	--border-hover: #275EFE;
-	--background: #fff;
-	--disabled: #F6F8FF;
-	--disabled-inner: #E1E6F9;
-	height: 21px;
-	outline: none;
-	display: inline-block;
-	vertical-align: top;
-	position: relative;
-	margin: 0;
-	cursor: pointer;
-	border: 1px solid var(--bc, var(--border));
-	background: var(--b, var(--background));
-	transition: background .8s, border-color .8s, box-shadow .8s;
-
-	&:after {
-		content: '';
-		display: block;
-		left: 0;
-		top: 0;
-		position: absolute;
-		transition: transform var(--d-t, .9s) var(--d-t-e, ease), opacity var(--d-o, .9s);
-	}
-
-	&:checked {
-		--b: var(--active);
-		--bc: var(--active);
-		--d-o: .3s;
-		--d-t: .6s;
-		--d-t-e: cubic-bezier(.2, .85, .32, 1.2);
-	}
-
-	&:disabled {
-		--b: var(--disabled);
-		cursor: not-allowed;
-		opacity: .9;
-
-		&:checked {
-			--b: var(--disabled-inner);
-			--bc: var(--border);
-		}
-
-		&+label {
-			cursor: not-allowed;
-		}
-	}
-
-	&:hover {
-		&:not(:checked) {
-			&:not(:disabled) {
-				--bc: var(--border-hover);
-			}
-		}
-	}
-
-	&:focus {
-		box-shadow: 0 0 0 var(--focus);
-	}
-
-	&:not(.switch) {
-		width: 21px;
-
-		&:after {
-			opacity: var(--o, 0);
-		}
-
-		&:checked {
-			--o: 1;
-		}
-	}
-
-	&+label {
-		font-size: 14px;
-		line-height: 21px;
-		display: inline;
-		vertical-align: top;
-		cursor: pointer;
-		margin-left: 4px;
-	}
-}
-
-input[type='radio'] {
-	border-radius: 50%;
-
-	&:after {
-		width: 19px;
-		height: 19px;
-		border-radius: 50%;
-		background: var(--active-inner);
-		opacity: 0;
-		transform: scale(var(--s, .7));
-	}
-
-	&:checked {
-		--s: .5;
-	}
-}
-
-ul {
-	margin: 12px;
-	padding: 0;
-	list-style: none;
-	width: 100%;
-	max-width: 320px;
-
-	li {
-		margin: 16px 0;
-		position: relative;
-	}
-}
-
-*/ html {
-	box-sizing: border-box;
+    .sliderMenu {
+        display: none; /* Asegura que el slider del menú móvil no se muestra en pantallas grandes */
+    }
 }
