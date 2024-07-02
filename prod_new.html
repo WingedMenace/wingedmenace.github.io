@@ -28,7 +28,11 @@
     <main class="main">
         <div class="container" id="app">
             <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-                <h1>Alta de Producto</h1>
+                <h1>Alta de objeto</h1>
+                <div class="mb-3">
+                    <label for="id">Id</label>
+                    <input type="number" name="id" id="id" disabled v-model="id">
+                  </div>
                 <div class="mb-3">
                     <label for="carta">Carta</label>
                     <input type="text" name="carta" id="carta" v-model="carta">
