@@ -25,7 +25,7 @@
     </header>
     <main class="main">
         <div id="app" class="container">
-            <h1>Productos</h1>
+            <h1>elementos</h1>
             <br>
             <a class="btn btn-primary" href="prod_new.html">Nuevo</a>
             <br><br>
@@ -52,20 +52,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="" v-for="producto in productos">
-                                    <td scope="row">{{producto.id}}</td>
-                                    <td>{{producto.carta}}</td>
-                                    <td>{{producto.significado}}</td>
-                                    <td>{{producto.precio}}</td>
-                                    <td>{{producto.stock}}</td>
+                                <tr class="" v-for="elemento in datos">
+                                    <td scope="row">{{elemento.id}}</td>
+                                    <td>{{elemento.carta}}</td>
+                                    <td>{{elemento.significado}}</td>
+                                    <td>{{elemento.precio}}</td>
+                                    <td>{{elemento.stock}}</td>
                                     <td>
-                                        <img width="60" :src="producto.imagen" :alt="producto.carta">
+                                        <img width="60" :src="elemento.imagen" :alt="elemento.carta">
                                     </td>
                                     <td>
                                         <a class="btn btn-primary"
-                                            :href="'producto_update.html?id='+ producto.id">Editar</a>
+                                            :href="'prod_upd.html?id='+ elemento.id">Editar</a>
                                         <button type="button" class="btn btn-danger"
-                                            v-on:click="eliminar(producto.id)">Eliminar</button>
+                                            v-on:click="eliminar(elemento.id)">Eliminar</button>
                                     </td>
                                 </tr>
                             </tbody>
