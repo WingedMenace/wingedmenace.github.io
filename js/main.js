@@ -174,7 +174,7 @@ createApp({
       datos: [],
       error: false,
       cargando: true,
-      id: 0,
+      id: "",
       carta: "",
       significado: "",
       imagen: "",

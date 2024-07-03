@@ -5,13 +5,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            id: 0,
+            id: "",
             carta: "",
             significado: "",
             imagen: "",
             precio: 0,
             stock: 0,
-            url: 'https://wingedmenace.pythonanywhere.com/productos' + id,
+            url: 'https://wingedmenace.pythonanywhere.com/productos'+id,
         }
     },
     methods: {
