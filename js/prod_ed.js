@@ -11,9 +11,7 @@ createApp({
             imagen: "",
             precio: 0,
             stock: 0,
-            //url: 'https://wingedmenace.pythonanywhere.com/productos'+id,
-            url: 'http://localhost:5000/api/' +id,
-            //url:'http://mcerda.pythonanywhere.com/productos/'+id,
+            url: 'https://wingedmenace.pythonanywhere.com/productos' + id,
         }
     },
     methods: {
@@ -51,7 +49,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./productos.html"; // navega a productos.html          
+                    window.location.href = "./prod.html";        
                 })
                 .catch(err => {
                     console.error(err);
