@@ -139,7 +139,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      url: "/js/api.json", //Es una API local
+      url: "/js/api.json",
       datos: [],
       error: false,
     }
@@ -188,11 +188,31 @@ createApp({
         .then(response => response.json())
         .then(data => {
           this.datos = data;
+          this.stock = data.stock;
           this.cargando = false
         })
         .catch(err => {
           console.error(err);
           this.error = true
+        })
+    },
+    tirar() { //Ver
+      let producto = {
+        stock: this.stock - 1,
+      }
+      var options = {
+        body: JSON.stringify(producto),
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        redirect: 'follow'
+      }
+      fetch(this.url, options)
+        .then(function () {
+          alert("Has tirado una carta")
+        })
+        .catch(err => {
+          console.error(err);
+          alert("Error")
         })
     },
     eliminar(id) {
@@ -224,7 +244,7 @@ createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro grabado")
-          window.location.href = "./prod.html"; 
+          window.location.href = "./prod.html";
         })
         .catch(err => {
           console.error(err);
