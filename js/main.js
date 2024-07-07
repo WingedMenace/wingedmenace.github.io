@@ -198,7 +198,7 @@ createApp({
     },
     tirar() { //Ver
       let producto = {
-        stock: this.stock - 1,
+        stock: $(this.stock) - 1,
       }
       var options = {
         body: JSON.stringify(producto),
