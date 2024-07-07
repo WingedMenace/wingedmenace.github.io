@@ -196,17 +196,15 @@ createApp({
           this.error = true
         })
     },
-    tirar() { //Ver
-      let producto = {
-        stock: $(this.stock) - 1,
-      }
-      var options = {
-        body: JSON.stringify(producto),
-        method: 'PATCH',
+    tirar(producto) { //Ver
+      let coso = producto.stock - 1
+      fetch(`https://wingedmenace.pythonanywhere.com/api/${api.stock}`, {
+        method: 'PUT',
+        mode: "cors",
         headers: { 'Content-Type': 'application/json' },
-        redirect: 'follow'
-      }
-      fetch(this.url, options)
+        body: JSON.stringify({
+          stock: coso
+        })
         .then(function () {
           alert("Has tirado una carta")
         })
@@ -214,6 +212,7 @@ createApp({
           console.error(err);
           alert("Error")
         })
+      })
     },
     eliminar(id) {
       const url = this.url + '/' + id;
@@ -250,7 +249,31 @@ createApp({
           console.error(err);
           alert("Error al Grabar")
         })
-    }
+    },
+    modificar() {
+      let producto = {
+        carta: this.carta,
+        significado: this.significado,
+        imagen: this.imagen,
+        precio: this.precio,
+        stock: this.stock
+      }
+      var options = {
+        body: JSON.stringify(producto),
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        redirect: 'follow'
+      }
+      fetch(this.url, options)
+        .then(function () {
+          alert("Registro modificado")
+          window.location.href = "./prod.html";
+        })
+        .catch(err => {
+          console.error(err);
+          alert("Error al Modificar")
+        })
+    },
   },
   created() {
     this.fetchData(this.url)
