@@ -1,17 +1,14 @@
-console.log(location.search)
-var id = location.search.substr(4) // producto_update.html?id=1
-console.log(id)
 const { createApp } = Vue
 createApp({
     data() {
         return {
-            id: "",
+            id: 0,
             carta: "",
             significado: "",
             imagen: "",
             precio: 0,
             stock: 0,
-            url: 'https://wingedmenace.pythonanywhere.com/productos'+(location.search.substr(4)===""?'':"/")+location.search.substr(4), //+ id,
+            url: 'https://wingedmenace.pythonanywhere.com/productos'+ id,
         }
     },
     methods: {
