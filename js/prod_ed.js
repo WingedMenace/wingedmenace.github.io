@@ -1,14 +1,17 @@
+console.log(location.search)     // lee los argumentos pasados a este formulario
+var id = location.search.substr(4)  // producto_update.html?id=1
+console.log(id)
 const { createApp } = Vue
 createApp({
     data() {
         return {
-            id: 0,
+            id: "",
             carta: "",
             significado: "",
             imagen: "",
             precio: 0,
             stock: 0,
-            url: 'https://wingedmenace.pythonanywhere.com/productos'+ id,
+            url: 'https://wingedmenace.pythonanywhere.com/productos'+id,
         }
     },
     methods: {
@@ -35,7 +38,7 @@ createApp({
                 significado: this.significado,
                 imagen: this.imagen,
                 precio: this.precio,
-                stock: this.stock
+                stock: this.stock,
             }
             var options = {
                 body: JSON.stringify(producto),
@@ -46,13 +49,13 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./prod.html";
+                    window.location.href = "./prod.html";        
                 })
                 .catch(err => {
                     console.error(err);
                     alert("Error al Modificar")
                 })
-        },
+        }
     },
     created() {
         this.fetchData(this.url)

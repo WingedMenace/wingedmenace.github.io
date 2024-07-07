@@ -12,7 +12,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
             integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
             </script>
-        <link rel="stylesheet" href="css/styles.css">
+            <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="img/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -21,6 +21,7 @@
 
 <body>
     <header id="header" class="header">
+        <!-- place navbar here -->
     </header>
     <main class="main">
         <div id="app" class="container">
@@ -29,12 +30,12 @@
             <a class="btn btn-primary" href="prod_new.html">Nuevo</a>
             <br><br>
             <div v-if="error">
-                <p>Lo sentimos, algo no funciona bien o la api está inactiva</p>
+                <p>Lo sentimos , ........</p>
             </div>
             <div v-else>
                 <section v-if="cargando">
                     <div class="spinner-border"></div>
-                    <p>Cargando</p>
+                    <p>Cargando .....</p>
                 </section>
                 <section v-else>
                     <div class="table-responsive">
@@ -44,9 +45,9 @@
                                     <th scope="col">Id</th>
                                     <th scope="col">Carta</th>
                                     <th scope="col">Significado</th>
+                                    <th scope="col">Imagen</th>
                                     <th scope="col">Precio</th>
                                     <th scope="col">Stock</th>
-                                    <th scope="col">Imagen</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -77,7 +78,6 @@
     <footer id="footer" class="footer"></footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/crud.js"></script>
     <script src="./js/menuMovil.js"></script>
     <script src="./js/adminloginrevision.js"></script>
     <script src="./js/loginadmin.js"></script>
