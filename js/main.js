@@ -165,6 +165,7 @@ createApp({
   }
 }).mount('#app')*/
 
+const { createApp } = Vue
 createApp({
   data() {
     return {
