@@ -38,7 +38,7 @@ createApp({
                 significado: this.significado,
                 imagen: this.imagen,
                 precio: this.precio,
-                stock: this.stock,
+                stock: this.stock
             }
             var options = {
                 body: JSON.stringify(producto),
