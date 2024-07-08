@@ -5,13 +5,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            id: "",
+            url: 'https://wingedmenace.pythonanywhere.com/api'+id,
+            id: 0,
             carta: "",
             significado: "",
             imagen: "",
             precio: 0,
             stock: 0,
-            url: 'https://wingedmenace.pythonanywhere.com/productos'+id,
         }
     },
     methods: {
@@ -19,7 +19,6 @@ createApp({
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data)
                     this.id = data.id
                     this.carta = data.carta
                     this.significado = data.significado
@@ -49,7 +48,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "./prod.html";        
+                          
                 })
                 .catch(err => {
                     console.error(err);
