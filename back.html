@@ -12,7 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
         </script>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -23,28 +22,18 @@
     <header id="header" class="header"></header>
     <main class="main">
         <div id="app" class="container">
-            <h1>elementos</h1>
+            <h1>CARTAS</h1>
             <br>
             <a class="btn btn-primary" href="prod_new.html">Nuevo</a>
-            <br><br>
-            <div v-if="error">
-                <p>Lo sentimos , ........</p>
-            </div>
             <div v-else>
-                <section v-if="cargando">
-                    <div class="spinner-border"></div>
-                    <p>Cargando .....</p>
-                </section>
                 <section v-else>
-                    <div class="table-responsive">
+                    <div class="table-responsive" id="table">
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Carta</th>
                                     <th scope="col">Significado</th>
-                                    <th scope="col">Precio</th>
-                                    <th scope="col">Stock</th>
                                     <th scope="col">Imagen</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
@@ -54,8 +43,6 @@
                                     <td scope="row">{{elemento.id}}</td>
                                     <td>{{elemento.carta}}</td>
                                     <td>{{elemento.significado}}</td>
-                                    <td>{{elemento.precio}}</td>
-                                    <td>{{elemento.stock}}</td>
                                     <td>
                                         <img width="60" :src="elemento.imagen" :alt="elemento.carta">
                                     </td>
@@ -78,7 +65,7 @@
     <script src="./js/menuMovil.js"></script>
     <script src="./js/adminloginrevision.js"></script>
     <script src="./js/loginadmin.js"></script>
-    <script src="./js/prod_ed.js"></script>
+    <script src="./js/crud.js"></script>
 </body>
 
 </html>

@@ -20,10 +20,9 @@ document.querySelector("#header").innerHTML = `
       <a href="cartas.html">Significado Cartas</a>
       <a href="about.html">Sobre nosotros</a>
       <a href="form.html">Contacto</a>
-      <a href="admininiciar.html">Iniciar Sesion<a/>
-      <a class="badmin" href="prod_new.html">Agregar Producto<a/>
-      <a class="badmin" href="prod.html">Productos<a/>
-      <a id="bLogou" class="badmin" href="index.html">Salir<a/>
+      <a href="admininiciar.html">Iniciar Sesion</a>
+      <a class="badmin" href="back.html">Mazo</a>
+      <a id="bLogou" class="badmin" href="index.html">Salir</a>
     </div>
   </nav>
 </div>
@@ -41,13 +40,12 @@ document.querySelector("#header").innerHTML = `
             <div class="top-redes">
                 <div class="enlacesMovil">
                   <a href="index.html">Home</a>
-                  <a href="cartas.html">Significado Cartas</a>
+                  <a href="cartas.html">Cartas</a>
                   <a href="about.html">Sobre nosotros</a>
                   <a href="form.html">Contacto</a>
-                  <a href="admininiciar.html">Iniciar Sesion<a/>
-                  <a class="badmin" href="prod_new.html">Agregar Producto<a/>
-                  <a class="badmin" href="prod.html">Productos<a/>
-                  <a id="bLogou" class="badmin" href="index.html">Salir<a/>
+                  <a href="admininiciar.html">Iniciar Sesion</a>
+                  <a class="badmin" href="back.html">Mazo</a>
+                  <a id="bLogou" class="badmin" href="index.html">Salir</a>
                 </div>
             </div>
         </div>
@@ -166,99 +164,3 @@ createApp({
     this.fetchData(this.url)
   }
 }).mount('#app')*/
-
-//API reomta
-const { createApp } = Vue
-createApp({
-  data() {
-    return {
-      url: "https://wingedmenace.pythonanywhere.com/api",
-      datos: [],
-      error: false,
-      cargando: true,
-      id: "",
-      carta: "",
-      significado: "",
-      imagen: "",
-      precio: 0,
-      stock: 0,
-    }
-  },
-  methods: {
-    fetchData(url) {
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          this.datos = data;
-          this.cargando = false
-        })
-        .catch(err => {
-          console.error(err);
-          this.error = true
-        })
-    },
-    eliminar(id) {
-      const url = this.url + '/' + id;
-      var options = {
-        method: 'DELETE',
-      }
-      fetch(url, options)
-        .then(res => res.text())
-        .then(res => {
-          alert('Registro Eliminado')
-          location.reload();
-        })
-    },
-    grabar() {
-      let prod = {
-        carta: this.carta,
-        significado: this.significado,
-        imagen: this.imagen,
-        precio: this.precio,
-        stock: this.stock,
-      }
-      var options = {
-        body: JSON.stringify(prod),
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        redirect: 'follow'
-      }
-      fetch(this.url, options)
-        .then(function () {
-          alert("Registro grabado")
-          window.location.href = "./prod.html";
-        })
-        .catch(err => {
-          console.error(err);
-          alert("Error al Grabar")
-        })
-    },
-    tirar() {
-      let producto = {
-        carta: this.carta,
-        significado: this.significado,
-        imagen: this.imagen,
-        precio: this.precio,
-        stock: this.stock - 1,
-      }
-      var options = {
-        body: JSON.stringify(producto),
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        redirect: 'follow'
-      }
-      fetch(this.url, options)
-        .then(function () {
-          alert("Tiraste una carta")
-
-        })
-        .catch(err => {
-          console.error(err);
-          alert("Error desconocido")
-        })
-    },
-  },
-  created() {
-    this.fetchData(this.url)
-  },
-}).mount('#app')

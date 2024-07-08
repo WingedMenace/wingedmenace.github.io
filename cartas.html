@@ -20,6 +20,7 @@
     <div class="gcontainer">
         <header id="header" class="header"></header>
         <main class="main">
+            <div style="align-items: center;"><button type="button" class="btn btn-success" @click="tirar()">Prueba tu fortuna</button></div>
             <section>
                 <div id="app" class="caja">
                     <div v-for="elemento in datos">
@@ -28,14 +29,8 @@
                                 <img :src="elemento.imagen" :alt="elemento.title" class="card-img-top">
                                 <div class="card-body">
                                     <h5 class="card-title">{{elemento.id}} - {{elemento.carta}}</h5>
-                                    <p class="card-text">{{elemento.significado}}</p>
                                     <div class="card-footer">
-                                        <span v-if="elemento.stock===0">
-                                            <button type="button" class="btn btn-secondary disabled">No disponible</button>
-                                        </span>
-                                        <span v-else-if="elemento.stock>0">
-                                            <button type="button" class="btn btn-success" @click="tirar()">Tirar 1</button>
-                                        </span>
+                                        <p class="card-text">{{elemento.significado}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -51,10 +46,10 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/tirar.js"></script>
     <script src="./js/menuMovil.js"></script>
     <script src="./js/adminloginrevision.js"></script>
     <script src="./js/loginadmin.js"></script>
-    <script src="./js/prod_ed.js"></script>
 </body>
 
 </html>

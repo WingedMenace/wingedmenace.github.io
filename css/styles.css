@@ -83,7 +83,7 @@ body {
 
 
 .header {
-	position: sticky;
+	position: static;
 	z-index: 99;
 	top: 0;
 	background: #25688a;
@@ -359,6 +359,12 @@ section {
 	}
 }
 
+.table{
+	background-color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+
 .form {
 	border: 2px solid black;
 	border-radius: 5px;
@@ -606,10 +612,10 @@ form .validation {
 }
 
 div#sliderMenu.sliderMenu.active{
-	position: sticky;
+	position: static;
 	z-index: 99;
 	top: 0;
-	background: #25688a;
+	background: royalblue;
 	color: white;
 	grid-area: header;
 	padding: 0px;
