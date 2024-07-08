@@ -23,6 +23,7 @@ document.querySelector("#header").innerHTML = `
       <a href="admininiciar.html">Iniciar Sesion<a/>
       <a class="badmin" href="prod_new.html">Agregar Producto<a/>
       <a class="badmin" href="prod.html">Productos<a/>
+      <a id="bLogou" class="badmin" href="index.html">Salir<a/>
     </div>
   </nav>
 </div>
@@ -46,6 +47,7 @@ document.querySelector("#header").innerHTML = `
                   <a href="admininiciar.html">Iniciar Sesion<a/>
                   <a class="badmin" href="prod_new.html">Agregar Producto<a/>
                   <a class="badmin" href="prod.html">Productos<a/>
+                  <a id="bLogou" class="badmin" href="index.html">Salir<a/>
                 </div>
             </div>
         </div>
