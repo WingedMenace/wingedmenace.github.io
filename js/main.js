@@ -2,14 +2,14 @@
 
 document.getElementById("footer").innerHTML = `
 <h3>Centro Holístico Nueva Luna</h3>
-<a href="https://wa.me/+5493487660068?text=MENSAJE_OPCIONAL" target="_blank" class="whatsapp-button" >
+<a href="https://wa.me/+54911111111?text=MENSAJE_OPCIONAL" target="_blank" class="whatsapp-button" >
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 <a class="boton" href="form.html">Contáctanos</a>
 <a class="redesSociales" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
 <a class="redesSociales" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 <a class="redesSociales" href="https://www.linkedin.com/?trk=guest_homepage-jobseeker_nav-header-logo" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-<a class="redesSociales" href="https://wa.me/+5493487660068?text=MENSAJE_OPCIONAL" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>`;
+<a class="redesSociales" href="https://wa.me/+5491111111111?text=MENSAJE_OPCIONAL" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>`;
 
 document.querySelector("#header").innerHTML = `
 <div class="navcont">
