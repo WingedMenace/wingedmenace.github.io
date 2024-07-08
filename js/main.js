@@ -233,6 +233,30 @@ createApp({
           alert("Error al Grabar")
         })
     },
+    tirar() {
+      let producto = {
+        carta: this.carta,
+        significado: this.significado,
+        imagen: this.imagen,
+        precio: this.precio,
+        stock: this.stock - 1,
+      }
+      var options = {
+        body: JSON.stringify(producto),
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        redirect: 'follow'
+      }
+      fetch(this.url, options)
+        .then(function () {
+          alert("Tiraste una carta")
+
+        })
+        .catch(err => {
+          console.error(err);
+          alert("Error desconocido")
+        })
+    },
   },
   created() {
     this.fetchData(this.url)
