@@ -1,10 +1,9 @@
 new Vue({
     el: "#app",
     data() {
-        //list: ['Ashley','Andy','Andrew','Chad','Hiep','Sarah','David'],
-        //chosenName: ''
-        return {
-            url: "https://wingedmenace.pythonanywhere.com/api",
+         return {
+            url: "https://prueba1ivo.pythonanywhere.com/api",
+            //url: "https://wingedmenace.pythonanywhere.com/api",
             datos: [],
             error: false,
             id: "",
@@ -16,21 +15,16 @@ new Vue({
     methods: {
         fetchData(url) {
             fetch(url)
-                .then(response => response.json())
                 .then(data => {
                     this.datos = data;
                     this.cargando = false
                 })
-                .catch(err => {
-                    console.error(err);
-                    this.error = true
-                })
         },
-    },
-    methods: {
-        picker: function () {
-            var chosenNumber = Math.floor(Math.random() * this.list.length);
-            this.chosenName = this.list[chosenNumber];
+        tirar () {
+            var chosenNumber = Math.floor(Math.random() * this.data.length);
+            this.id = this.list[chosenNumber];
+            alert('{{chosenNumber.id}}')
+            //this.chosenName = this.list[chosenNumber];
         }
     }
 });

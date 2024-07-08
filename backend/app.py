@@ -6,11 +6,14 @@ app=Flask(__name__)
 CORS(app)
 
 
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://Wingedmenace:Python12@Wingedmenace.mysql.pythonanywhere-services.com/Wingedmenace$default'
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://Prueba1Ivo:Python12@Prueba1Ivo.mysql.pythonanywhere-services.com/Prueba1Ivo$default'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 app.config['SQLALCHEMY_POOL_RECYCLE']=299
-app.config['SQLALCHEMY_POOL_TIMEOUT']=30
-db= SQLAlchemy(app)
+app.config['SQLALCHEMY_POOL_TIMEOUT']=3000
+db=SQLAlchemy(app)
 ma=Marshmallow(app)
 
-from controladores.producto_controlador import *
+from controladores.cartas_controlador import *
+
+if __name__=='__main__':
+    app.run(debug=True, port=5001)    # ejecuta el servidor Flask en el puerto 5000

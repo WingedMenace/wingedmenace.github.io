@@ -1,10 +1,10 @@
 from flask import jsonify, request
 from app import app, db, ma
-from modelos.producto_modelo import *
+from modelos.cartas_modelo import *
 
 class ApiSchema(ma.Schema):
     class Meta:
-        fields=('id','carta','significado','imagen','precio','stock')
+        fields=('id','carta','significado','imagen')
 
 
 cartas_schema=ApiSchema()
@@ -20,7 +20,7 @@ def get_Cosos():
 @app.route('/api/<id>',methods=['GET'])
 def get_coso(id):
     coso=Api.query.get(id)
-    return producto_schema.jsonify(coso)
+    return cartas_schema.jsonify(coso)
 
 @app.route('/api/<id>',methods=['DELETE'])
 def delete_coso(id):
@@ -34,7 +34,7 @@ def create_coso():
     carta=request.json['carta']
     significado=request.json['significado']
     imagen=request.json['imagen']
-    new_producto=Api(carta,significado,imagen)
+    new_coso=Api(carta,significado,imagen)
     db.session.add(new_coso)
     db.session.commit()
     return cartas_schema.jsonify(new_coso)

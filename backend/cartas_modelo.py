@@ -8,7 +8,7 @@ class Api(db.Model):
     carta=db.Column(db.String(100))
     significado=db.Column(db.String(500))
     imagen=db.Column(db.String(400))
-    def __init__(self,carta,significado,imagen,precio,stock):
+    def __init__(self,carta,significado,imagen):
         self.carta=carta
         self.significado=significado
         self.imagen=imagen
