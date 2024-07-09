@@ -2,7 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
          return {
-            url: "https://prueba1ivo.pythonanywhere.com/cartas",
+            url: "https://wingedmenace.pythonanywhere.com/cartas",
             datos: [],
             error: false,
             id: "",
