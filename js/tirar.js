@@ -2,8 +2,7 @@ new Vue({
     el: "#app",
     data() {
          return {
-            url: "https://prueba1ivo.pythonanywhere.com/api",
-            //url: "https://wingedmenace.pythonanywhere.com/api",
+            url: "https://prueba1ivo.pythonanywhere.com/cartas",
             datos: [],
             error: false,
             id: "",
@@ -15,11 +14,26 @@ new Vue({
     methods: {
         fetchData(url) {
             fetch(url)
-                .then(data => {
-                    this.datos = data;
-                    this.cargando = false
-                })
-        },
+              .then(response => response.json())
+              .then(
+                data => {
+                  console.log(data)
+      
+                  this.datos = data
+                  // para el boton modificar
+                  this.id = data.id
+                  this.carta = data.carta;
+                  this.significado = data.significado;
+                  this.imagen = data.imagen;
+                  
+      
+                }
+              )
+              .catch(error => {
+                console.log("Error:" + error)
+                this.error = true
+              });
+          },
         tirar () {
             var chosenNumber = Math.floor(Math.random() * this.data.length);
             this.id = this.list[chosenNumber];
