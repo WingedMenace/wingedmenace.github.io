@@ -1,5 +1,5 @@
-new Vue({
-    el: "#app",
+const { createApp } = Vue
+createApp({
     data() {
          return {
             url: "https://prueba1ivo.pythonanywhere.com/cartas",
