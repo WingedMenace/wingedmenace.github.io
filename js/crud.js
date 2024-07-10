@@ -52,7 +52,6 @@ createApp({
         carta: this.carta,
         significado: this.significado,
         imagen: this.imagen,
-        
       }
       var options = {
         body: JSON.stringify(alumno),
@@ -63,7 +62,7 @@ createApp({
       fetch(this.url + "/" + location.search.substr(4), options)
         .then(function () {
           alert("Registro modificado")
-          window.location.href = "./CRUDalumno.html"; 
+          window.location.href = "./back.html"; 
         })
         .catch(err => {
           console.error(err);
@@ -76,7 +75,6 @@ createApp({
         carta: this.carta,
         significado: this.significado,
         imagen: this.imagen,
-        
       }
       var options = {
         body: JSON.stringify(alumno),
@@ -87,7 +85,7 @@ createApp({
       fetch(this.url, options)
         .then(function () {
           alert("Registro grabado")
-          window.location.href = "./CRUDalumno.html";  // recarga productos.html
+          window.location.href = "./back.html";  // recarga productos.html
         })
         .catch(err => {
           console.error(err);
