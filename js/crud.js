@@ -91,9 +91,7 @@ createApp({
           console.error(err);
           alert("Error al Grabar")  // puedo mostrar el error tambien
         })
-    }
-
-
+    },
   },
   created() {  // created() se ejecuta cada vez que se crea el objeto VUE
     if (location.search.substr(4) === "") // si no viene de la modificacion

@@ -17,7 +17,7 @@ document.querySelector("#header").innerHTML = `
 <h1><img class="logo" src="/img/logo.png" alt="Logo">Centro Holístico Nueva Luna</h1>
     <div class="enlaces">
       <a href="index.html">Home</a>
-      <a href="cartas.html">Significado Cartas</a>
+      <a href="cartas.html">Cartas documentadas</a>
       <a href="about.html">Sobre nosotros</a>
       <a href="form.html">Contacto</a>
       <a href="admininiciar.html">Iniciar Sesion</a>
@@ -40,7 +40,7 @@ document.querySelector("#header").innerHTML = `
             <div class="top-redes">
                 <div class="enlacesMovil">
                   <a href="index.html">Home</a>
-                  <a href="cartas.html">Cartas</a>
+                  <a href="cartas.html">Cartas doc.</a>
                   <a href="about.html">Sobre nosotros</a>
                   <a href="form.html">Contacto</a>
                   <a href="admininiciar.html">Iniciar Sesion</a>
